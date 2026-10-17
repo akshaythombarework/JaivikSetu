@@ -122,7 +122,7 @@ JaivikSetu/
 ├── robots.txt               # Search engine crawler permissions
 ├── sitemap.xml              # XML Sitemap for search engines
 ├── package.json             # Project metadata & start scripts
-├── server.js                # Built-in lightweight local development server
+├── local-server.js          # Built-in lightweight local development server
 └── .gitignore               # Excluded files for git version control
 ```
 
