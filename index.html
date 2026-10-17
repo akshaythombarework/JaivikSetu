@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JaivikSetu – Organic Farming Awareness Hub | Bridging India to Organic Farming</title>
+  <meta name="description" content="India's dedicated organic farming awareness hub. Explore step-by-step composting guides, natural pesticide formulations, PKVY government schemes, and interactive farming tools.">
+  <meta name="keywords" content="organic farming India, JaivikSetu, natural pesticides, composting methods, PKVY, vermicompost, Jeevamrut, organic certification">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JaivikSetu – Organic Farming Awareness Hub">
+  <meta property="og:description" content="Bridging India to organic farming through simple guides, natural pest recipes, and government schemes.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+
+  <!-- ===================================================================
+       TOP NAVBAR ONLY (NO SIDEBAR ANYWHERE ON THE SITE)
+       Sticky glass navbar: transparent over hero, mehendi glass on scroll
+       =================================================================== -->
+  <header class="navbar-header" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <!-- Sprout / Bridge SVG -->
+          <svg viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22v-9"/>
+            <path d="M12 13a5 5 0 0 0 5-5c0-3-5-5-5-5s-5 2-5 5a5 5 0 0 0 5 5z"/>
+            <path d="M12 17c3.5 0 7-1.5 9-4"/>
+            <path d="M12 17c-3.5 0-7-1.5-9-4"/>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <!-- Max 8 Navbar Links (PRD §3) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Bilingual Toggle Button (EN / मराठी) -->
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle Language between English and Marathi">
+          <span class="lang-icon">🌐</span>
+          <span class="lang-text" data-i18n="lang_btn">मराठी</span>
+        </button>
+
+        <!-- Mobile hamburger for navbar dropdown (NOT A SIDEBAR) -->
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         HERO SECTION – FULL BLEED, NO EMPTY SPACE (PRD §5)
+         Edge-to-edge, Ken Burns zoom, light rays, sprout pulse, particles
+         =================================================================== -->
+    <section class="hero" id="hero" aria-label="Introduction to JaivikSetu">
+      <!-- Layer 0: Image with Ken Burns zoom -->
+      <div class="hero-bg-anim" aria-hidden="true"></div>
+
+      <!-- Layer 1: Sunlight rays & bloom sweep -->
+      <div class="hero-sunlight" aria-hidden="true"></div>
+
+      <!-- Layer 2: Particle canvas (leaves, pollen, fireflies) -->
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+      <!-- Layer 3: Sprout glow pulse (focal point x ~ 44%, y ~ 40%) -->
+      <div class="sprout-glow" aria-hidden="true"></div>
+
+      <!-- Layer 4: Dark green readability overlay -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Layer 5: Hero Content (left aligned, staggered reveal) -->
+      <div class="hero-content">
+        <div class="hero-text-block">
+          <div class="eyebrow-chip">
+            <span>🌱</span>
+            <span data-i18n="hero_eyebrow">JaivikSetu · Organic Farming Awareness Hub</span>
+          </div>
+
+          <h1>
+            <span data-i18n="hero_h1_prefix">Grow Healthy. Grow </span>
+            <span class="accent-word" data-i18n="hero_h1_accent">Organic.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero_sub">
+            Bridging India's awareness and adoption gap in organic farming, with simple guides, tools and schemes.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="learn.html" class="btn btn-primary" data-i18n="hero_cta_learn">Start Learning</a>
+            <a href="tools.html#calculator" class="btn btn-outline" data-i18n="hero_cta_calc">Try Compost Calculator</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 6: Scroll cue bouncing arrow -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span data-i18n="hero_scroll">SCROLL TO EXPLORE</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         STATS RIBBON (HOME §6.1 #1) – TOUCHES HERO BOTTOM, COUNT-UP
+         =================================================================== -->
+    <div class="container">
+      <div class="stats-ribbon">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-count="#1">#1</div>
+            <div class="stat-label" data-i18n="stat_1_lbl">Most organic producers in the world (India)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="2016">2016</div>
+            <div class="stat-label" data-i18n="stat_2_lbl">Sikkim became world's 1st 100% organic state</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="6+">6+</div>
+            <div class="stat-label" data-i18n="stat_3_lbl">Proven composting methods with step guides</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="10+">10+</div>
+            <div class="stat-label" data-i18n="stat_4_lbl">Natural pesticide recipes & biological traps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 1: THE PROBLEM (TERRACOTTA THEME §6.1 #2)
+         Animated vicious-cycle diagram & 3 cause bullets
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="problem">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-terracotta" data-i18n="problem_eyebrow">The Chemical Dilemma</span>
+          <h2 data-i18n="problem_title">Breaking the Vicious Chemical Cycle</h2>
+          <p data-i18n="problem_desc">Chemical inputs give temporary yield boosts but degrade long-term soil microbiome. Over time, more chemicals are required for less output.</p>
+        </div>
+
+        <div class="cycle-container">
+          <!-- Animated 4-Node Vicious Cycle Diagram -->
+          <div class="cycle-diagram" aria-label="Vicious chemical cycle diagram">
+            <svg class="cycle-svg" viewBox="0 0 400 400">
+              <defs>
+                <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#C4552D"/>
+                  <stop offset="100%" stop-color="#A53E19"/>
+                </linearGradient>
+              </defs>
+              <!-- Animated circular path -->
+              <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(196, 85, 45, 0.25)" stroke-width="4"/>
+              <circle cx="200" cy="200" r="140" fill="none" stroke="url(#terracottaGrad)" stroke-width="4" stroke-dasharray="25 15" stroke-linecap="round">
+                <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="18s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+
+            <!-- 4 Nodes -->
+            <div class="cycle-node cycle-node-1" data-i18n="cycle_node_1">1. Synthetic Chemical Overdose</div>
+            <div class="cycle-node cycle-node-2" data-i18n="cycle_node_2">2. Soil Carbon & Microbes Die</div>
+            <div class="cycle-node cycle-node-3" data-i18n="cycle_node_3">3. Natural Immunity & Yield Falls</div>
+            <div class="cycle-node cycle-node-4" data-i18n="cycle_node_4">4. Heavier Toxic Dose Demanded</div>
+
+            <div class="cycle-center-warning">
+              <span>⚠️</span>
+              <span data-i18n="cycle_center">DEGRADATION LOOP</span>
+            </div>
+          </div>
+
+          <!-- 3 Core Causes Cards -->
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="card card-topic-problems">
+              <h3 style="color: var(--terracotta); font-size: 1.2rem; margin-bottom: 0.35rem;" data-i18n="cause_1_title">Low Practical Training</h3>
+              <p style="margin: 0; font-size: 0.95rem;" data-i18n="cause_1_desc">Farmers want to shift but lack step-by-step training on natural preparation.</p>
+            </div>
+            <div class="card card-topic-problems">
+              <h3 style="color: var(--terracotta); font-size: 1.2rem; margin-bottom: 0.35rem;" data-i18n="cause_2_title">Fear of Yield Drop (Transition Years)</h3>
+              <p style="margin: 0; font-size: 0.95rem;" data-i18n="cause_2_desc">2–3 transition years require patience as soil biological activity regenerates.</p>
+            </div>
+            <div class="card card-topic-problems">
+              <h3 style="color: var(--terracotta); font-size: 1.2rem; margin-bottom: 0.35rem;" data-i18n="cause_3_title">Certification & Market Confusion</h3>
+              <p style="margin: 0; font-size: 0.95rem;" data-i18n="cause_3_desc">Misunderstanding differences between 'natural' and 'certified organic' crops.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wavy Hill Divider -->
+    <div class="divider-wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" fill="var(--mehendi-light)">
+        <path d="M0,24 C320,48 480,0 720,24 C960,48 1120,0 1440,24 L1440,48 L0,48 Z"></path>
+      </svg>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 2: WHAT IS ORGANIC FARMING & 4 PRINCIPLES (IFOAM) (§6.1 #3)
+         =================================================================== -->
+    <section class="section-padding section-mehendi-light" id="principles">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-green" data-i18n="principles_eyebrow">Core Philosophy</span>
+          <h2 data-i18n="principles_title">The 4 Principles of Organic Farming (IFOAM)</h2>
+          <p>Organic agriculture is a holistic production system sustaining the health of soils, ecosystems, and people through natural biological cycles.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem;">
+          <div class="card card-topic-methods">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🩺</div>
+            <h3 data-i18n="principle_health_title">Health</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="principle_health_desc">Sustaining and enhancing the health of soil, plant, animal, human, and planet as one indivisible whole.</p>
+          </div>
+          <div class="card card-topic-methods">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🌍</div>
+            <h3 data-i18n="principle_ecology_title">Ecology</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="principle_ecology_desc">Based on living ecological systems and cycles, working with them, emulating them, and helping sustain them.</p>
+          </div>
+          <div class="card card-topic-methods">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">⚖️</div>
+            <h3 data-i18n="principle_fairness_title">Fairness</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="principle_fairness_desc">Building relationships that ensure fairness regarding the common environment and life opportunities.</p>
+          </div>
+          <div class="card card-topic-methods">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🛡️</div>
+            <h3 data-i18n="principle_care_title">Care</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="principle_care_desc">Managed in a precautionary and responsible manner to protect the health of current and future generations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wavy Hill Divider -->
+    <div class="divider-wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" fill="var(--mehendi-light)">
+        <path d="M0,0 L1440,0 L1440,24 C1120,48 960,0 720,24 C480,48 320,0 0,24 Z"></path>
+      </svg>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 3: THE ORGANIC FARMING TREE (INTERACTIVE DIAGRAM §6.1 #4)
+         Root with 4 branches: Soil, Protection, Practices, Certification
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="farming-tree">
+      <div class="container">
+        <div class="tree-section-wrapper">
+          <div class="section-header" style="margin-bottom: 2.5rem;">
+            <span class="section-eyebrow eyebrow-green" data-i18n="tree_eyebrow">Interactive Knowledge Map</span>
+            <h2 data-i18n="tree_title">The Organic Farming Tree</h2>
+            <p data-i18n="tree_desc">Click any branch below to explore the core pillars of sustainable organic agriculture.</p>
+          </div>
+
+          <div class="tree-interactive-container">
+            <!-- Left: Branch Selectors -->
+            <div>
+              <button type="button" class="tree-branch-btn active" data-branch="soil" onclick="selectTreeBranch('soil')">
+                <div class="tree-branch-icon" style="background: var(--green-600);">🌱</div>
+                <div>
+                  <strong style="display: block; font-size: 1.1rem; color: var(--green-900);" data-i18n="tree_b1_title">1. Soil Building</strong>
+                  <span style="font-size: 0.9rem; color: var(--ink-muted);" data-i18n="tree_b1_desc">Composting, green manures, biochar, vermicompost, and microbial Jeevamrut boosters.</span>
+                </div>
+              </button>
+
+              <button type="button" class="tree-branch-btn" data-branch="protection" onclick="selectTreeBranch('protection')">
+                <div class="tree-branch-icon" style="background: var(--terracotta);">🐞</div>
+                <div>
+                  <strong style="display: block; font-size: 1.1rem; color: var(--green-900);" data-i18n="tree_b2_title">2. Crop Protection</strong>
+                  <span style="font-size: 0.9rem; color: var(--ink-muted);" data-i18n="tree_b2_desc">Neem decoctions, Dashaparni Ark, trap crops, sticky traps, and beneficial bio-agents.</span>
+                </div>
+              </button>
+
+              <button type="button" class="tree-branch-btn" data-branch="practices" onclick="selectTreeBranch('practices')">
+                <div class="tree-branch-icon" style="background: var(--brown);">🌾</div>
+                <div>
+                  <strong style="display: block; font-size: 1.1rem; color: var(--green-900);" data-i18n="tree_b3_title">3. Field Practices</strong>
+                  <span style="font-size: 0.9rem; color: var(--ink-muted);" data-i18n="tree_b3_desc">Legume crop rotation, intercropping, organic mulching, and micro-drip water efficiency.</span>
+                </div>
+              </button>
+
+              <button type="button" class="tree-branch-btn" data-branch="market" onclick="selectTreeBranch('market')">
+                <div class="tree-branch-icon" style="background: var(--blue);">🏷️</div>
+                <div>
+                  <strong style="display: block; font-size: 1.1rem; color: var(--green-900);" data-i18n="tree_b4_title">4. Certification & Market</strong>
+                  <span style="font-size: 0.9rem; color: var(--ink-muted);" data-i18n="tree_b4_desc">Participatory Guarantee System (PGS-India), NPOP standards, and Jaivik Bharat trust mark.</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Right: Dynamic Branch Leaves Content -->
+            <div id="tree-branch-display">
+              <!-- Rendered via js/main.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: QUICK TOOLS STRIP (§6.1 #5)
+         =================================================================== -->
+    <section class="section-padding section-mehendi-light" id="quick-tools">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="tools_eyebrow">Interactive Decision Aids</span>
+          <h2 data-i18n="tools_title">Smart Organic Farming Tools</h2>
+          <p data-i18n="tools_sub">Instant digital calculators and diagnostic tools designed for farmers and gardeners.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
+          <a href="tools.html#calculator" class="card card-topic-methods" style="text-decoration: none;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">⚖️</div>
+            <h3 data-i18n="tool_calc_title">Compost Calculator</h3>
+            <p style="font-size: 0.95rem;" data-i18n="tool_calc_desc">Calculate waste ratio, preparation method, and days to harvest based on your space.</p>
+            <span style="font-weight: 700; color: var(--green-600);" data-i18n="tool_calc_btn">Launch Calculator ➔</span>
+          </a>
+
+          <a href="tools.html#pest-finder" class="card card-topic-problems" style="text-decoration: none;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🔍</div>
+            <h3 data-i18n="tool_pest_title">Natural Pest Finder</h3>
+            <p style="font-size: 0.95rem;" data-i18n="tool_pest_desc">Identify insect attacks and get matching organic botanical concoctions and biological traps.</p>
+            <span style="font-weight: 700; color: var(--terracotta);" data-i18n="tool_pest_btn">Find Remedies ➔</span>
+          </a>
+
+          <a href="tools.html#quiz" class="card card-topic-action" style="text-decoration: none;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🎯</div>
+            <h3 data-i18n="tool_quiz_title">Which Method Suits Me?</h3>
+            <p style="font-size: 0.95rem;" data-i18n="tool_quiz_desc">Answer 5 quick questions on space, waste, and time to discover your ideal strategy.</p>
+            <span style="font-weight: 700; color: var(--saffron);" data-i18n="tool_quiz_btn">Start 5-Q Quiz ➔</span>
+          </a>
+
+          <a href="tools.html#myths" class="card card-topic-schemes" style="text-decoration: none;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">💡</div>
+            <h3 data-i18n="tool_myth_title">Myth vs Fact Cards</h3>
+            <p style="font-size: 0.95rem;" data-i18n="tool_myth_desc">Flip through common misconceptions about organic farming yield, cost, and soil preparation.</p>
+            <span style="font-weight: 700; color: var(--blue);" data-i18n="tool_myth_btn">Explore 8 Flip Cards ➔</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: BENEFITS VS CHALLENGES (BALANCE SCALE COMPONENT §6.1 #8)
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="balance-scale">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-green" data-i18n="scale_eyebrow">Objective Reality</span>
+          <h2 data-i18n="scale_title">Benefits vs. Challenges: The Honest Balance</h2>
+          <p data-i18n="scale_desc">We present organic farming with scientific integrity—acknowledging practical difficulties while showing the immense long-term ecological gain.</p>
+        </div>
+
+        <div class="scale-container">
+          <!-- Pan Left: Benefits -->
+          <div class="scale-pan-benefits">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+              <span style="font-size: 1.8rem;">✨</span>
+              <h3 style="color: var(--green-900); margin: 0;" data-i18n="scale_ben_heading">Long-Term Benefits</h3>
+            </div>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--green-600); font-weight: 800; font-size: 1.2rem;">✔</span>
+                <span data-i18n-html="scale_ben_1"><strong>Zero Toxic Chemical Residues:</strong> Safer nutrient-dense food for families and farm workers.</span>
+              </li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--green-600); font-weight: 800; font-size: 1.2rem;">✔</span>
+                <span data-i18n-html="scale_ben_2"><strong>Soil Carbon & Water Retention:</strong> Soil holds up to 20% more moisture, reducing drought vulnerability.</span>
+              </li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--green-600); font-weight: 800; font-size: 1.2rem;">✔</span>
+                <span data-i18n-html="scale_ben_3"><strong>Low Input Expenditure:</strong> Up to 70% cost savings by producing on-farm organic inputs.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--green-600); font-weight: 800; font-size: 1.2rem;">✔</span>
+                <span data-i18n-html="scale_ben_4"><strong>Market Price Premium:</strong> Certified crops command 20–40% premium in domestic & export markets.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pan Right: Challenges -->
+          <div class="scale-pan-challenges">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+              <span style="font-size: 1.8rem;">⚠️</span>
+              <h3 style="color: var(--terracotta-dark); margin: 0;" data-i18n="scale_chal_heading">Transition Challenges</h3>
+            </div>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--terracotta); font-weight: 800; font-size: 1.2rem;">✖</span>
+                <span data-i18n-html="scale_chal_1"><strong>Yield Dip in Years 1–3:</strong> Temporary output drop while soil microbiome and organic matter rebuild.</span>
+              </li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--terracotta); font-weight: 800; font-size: 1.2rem;">✖</span>
+                <span data-i18n-html="scale_chal_2"><strong>Higher Manual Labour:</strong> Weeding, compost layering, and botanical boiling require active farm work.</span>
+              </li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--terracotta); font-weight: 800; font-size: 1.2rem;">✖</span>
+                <span data-i18n-html="scale_chal_3"><strong>Certification Paperwork:</strong> Peer group documentation and soil testing inspections demand record-keeping.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--terracotta); font-weight: 800; font-size: 1.2rem;">✖</span>
+                <span data-i18n-html="scale_chal_4"><strong>Market Linkage Gaps:</strong> Direct farm-to-consumer supply chains require collective FPO clusters.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: GOVERNMENT SUPPORT PILLARS (§6.1 #9)
+         =================================================================== -->
+    <section class="section-padding section-mehendi-light" id="schemes-preview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-blue" data-i18n="schemes_strip_eyebrow">Government Backing</span>
+          <h2 data-i18n="schemes_strip_title">National Missions & Certification Standards</h2>
+          <p data-i18n="schemes_strip_desc">Key financial subsidies, cluster farming schemes, and certification portals supported by the Government of India.</p>
+        </div>
+
+        <div class="schemes-grid">
+          <div class="scheme-pillar-card">
+            <div>
+              <span class="scheme-badge" data-i18n="scheme_pkvy_badge">FINANCIAL ASSISTANCE</span>
+              <h3>PKVY Scheme</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);" data-i18n="scheme_pkvy_desc">Paramparagat Krishi Vikas Yojana provides ₹50,000/ha for 3 years to cluster farmers adopting organic inputs and packaging.</p>
+            </div>
+            <a href="schemes.html#pkvy" style="font-weight: 700; color: var(--blue);" data-i18n="scheme_view_btn">View Details ➔</a>
+          </div>
+
+          <div class="scheme-pillar-card">
+            <div>
+              <span class="scheme-badge" data-i18n="scheme_nmnf_badge">NATURAL FARMING</span>
+              <h3>NMNF Mission</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);" data-i18n="scheme_nmnf_desc">National Mission on Natural Farming promotes chemical-free cow-based natural inputs and bio-input resource centers.</p>
+            </div>
+            <a href="schemes.html#nmnf" style="font-weight: 700; color: var(--blue);" data-i18n="scheme_view_btn">View Details ➔</a>
+          </div>
+
+          <div class="scheme-pillar-card">
+            <div>
+              <span class="scheme-badge" data-i18n="scheme_pgs_badge">FREE CERTIFICATION</span>
+              <h3>PGS-India</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);" data-i18n="scheme_pgs_desc">Participatory Guarantee System enables smallholder farmer peer-review certification with zero third-party audit fees.</p>
+            </div>
+            <a href="schemes.html#pgs" style="font-weight: 700; color: var(--blue);" data-i18n="scheme_view_btn">View Details ➔</a>
+          </div>
+
+          <div class="scheme-pillar-card">
+            <div>
+              <span class="scheme-badge" data-i18n="scheme_jb_badge">NATIONAL LOGO</span>
+              <h3>Jaivik Bharat</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);" data-i18n="scheme_jb_desc">The official FSSAI unified logo certifying authentic organic food across Indian retail shelves and export borders.</p>
+            </div>
+            <a href="schemes.html#jaivik-bharat" style="font-weight: 700; color: var(--blue);" data-i18n="scheme_view_btn">View Details ➔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: AWARENESS CAMPAIGN ROADMAP (SAFFRON THEME §6.1 #10)
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="campaign-roadmap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="campaign_strip_eyebrow">Our Ground Action</span>
+          <h2 data-i18n="campaign_strip_title">JaivikSetu Awareness Campaign Roadmap</h2>
+          <p data-i18n="campaign_strip_desc">Taking organic agricultural knowledge directly to Indian villages, schools, and farmer clusters.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div class="card card-topic-action">
+            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🚜</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron);">PHASE 1</span>
+            <h3 style="font-size: 1.2rem; margin: 0.35rem 0;" data-i18n="camp_phase_1">Village Live Workshops</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="camp_phase_1_desc">Hands-on community composting demos and live preparation of Dashaparni Ark with local farmer groups.</p>
+          </div>
+
+          <div class="card card-topic-action">
+            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">📄</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron);">PHASE 2</span>
+            <h3 style="font-size: 1.2rem; margin: 0.35rem 0;" data-i18n="camp_phase_2">Regional Pamphlets</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="camp_phase_2_desc">Distribution of simple illustrated Marathi and Hindi guides across weekly village agricultural haats.</p>
+          </div>
+
+          <div class="card card-topic-action">
+            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🎓</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron);">PHASE 3</span>
+            <h3 style="font-size: 1.2rem; margin: 0.35rem 0;" data-i18n="camp_phase_3">School & College Drives</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="camp_phase_3_desc">Inspiring youth and agriculture students with kitchen composting and balcony permaculture gardens.</p>
+          </div>
+
+          <div class="card card-topic-action">
+            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🤝</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron);">PHASE 4</span>
+            <h3 style="font-size: 1.2rem; margin: 0.35rem 0;" data-i18n="camp_phase_4">FPO & QR Recipe Links</h3>
+            <p style="font-size: 0.95rem; margin: 0;" data-i18n="camp_phase_4_desc">Connecting organic producer groups with QR-coded harvest packets verifying organic methods.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="campaign.html" class="btn btn-primary" data-i18n="camp_cta_btn">Join the Campaign & Download Materials ➔</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       FOOTER (PRD §4.2 & §6.10)
+       Deep green #1B4A2A with hill silhouette on top, disclaimer & links
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-hill-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,32 C360,0 720,48 1080,16 C1260,0 1380,24 1440,32 L1440,48 L0,48 Z"></path>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-9"/>
+                <path d="M12 13a5 5 0 0 0 5-5c0-3-5-5-5-5s-5 2-5 5a5 5 0 0 0 5 5z"/>
+                <path d="M12 17c3.5 0 7-1.5 9-4"/>
+                <path d="M12 17c-3.5 0-7-1.5-9-4"/>
+              </svg>
+            </div>
+            <div class="brand-name">
+              <span style="color: #ffffff;">Jaivik</span><span style="color: #FFE58F;">Setu</span>
+            </div>
+          </div>
+          <p data-i18n="footer_tagline">Bridging Indian farmers, students, and home gardeners to sustainable organic agriculture.</p>
+          <div style="margin-top: 1.25rem;">
+            <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+              <span>🌐</span> <span data-i18n="lang_btn">मराठी</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="learn.html" data-i18n="nav_learn">Learn</a></li>
+            <li><a href="composting.html" data-i18n="nav_compost">Composting</a></li>
+            <li><a href="pesticides.html" data-i18n="nav_pesticides">Pesticides</a></li>
+            <li><a href="field-practices.html" data-i18n="nav_field">Field Practices</a></li>
+            <li><a href="schemes.html" data-i18n="nav_schemes">Schemes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_guides_title">Practical Guides</h4>
+          <ul class="footer-links">
+            <li><a href="tools.html#calculator" data-i18n="tool_calc_title">Compost Calculator</a></li>
+            <li><a href="tools.html#pest-finder" data-i18n="tool_pest_title">Natural Pest Finder</a></li>
+            <li><a href="tools.html#quiz" data-i18n="tool_quiz_title">Which Method Suits Me?</a></li>
+            <li><a href="tools.html#myths" data-i18n="tool_myth_title">Myth vs Fact Cards</a></li>
+            <li><a href="campaign.html#gallery">Campaign Gallery</a></li>
+            <li><a href="about.html">About & Mission</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_downloads_title">Printable PDFs</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')" data-i18n="pdf_compost">📄 Compost Cheat-Sheet</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('pesticide')" data-i18n="pdf_pesticide">📄 Pesticide Recipes Card</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('schemes')" data-i18n="pdf_schemes">📄 Scheme Application Guide</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Educational Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong style="color: #FFE9A8; display: block; margin-bottom: 0.25rem;" data-i18n="footer_disclaimer_title">Educational Disclaimer:</strong>
+        <span data-i18n="footer_disclaimer">JaivikSetu is a dedicated educational and awareness portal. Farmers are advised to consult local Krishi Vigyan Kendras (KVK) or State Agriculture Officers for location-specific dosage and scheme filings.</span>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 JaivikSetu. All rights reserved. Open-access awareness initiative for Indian Agriculture.</span>
+        <span data-i18n="footer_made_with">Made with 💚 for Indian Farmers</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       DOWNLOAD GUIDE MODAL (LIGHT DISMISS & PRINT FRIENDLY)
+       =================================================================== -->
+  <div class="modal-backdrop" id="download-modal" onclick="if(event.target===this) closeDownloadModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeDownloadModal()" aria-label="Close modal">✕</button>
+      <h3 id="modal-guide-title" style="color: var(--green-900); margin-bottom: 1rem;">JaivikSetu Practical Guide</h3>
+      <div id="modal-guide-content"></div>
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button type="button" class="btn btn-outline-dark" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button type="button" class="btn btn-primary" onclick="closeDownloadModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "jaiviksetu-organic-farming",
+  "version": "1.0.0",
+  "description": "JaivikSetu – Organic Farming Awareness Hub",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js",
+    "build": "echo 'Static build ready'"
+  },
+  "keywords": [
+    "organic-farming",
+    "jaiviksetu",
+    "agriculture",
+    "composting",
+    "pesticides"
+  ],
+  "author": "JaivikSetu",
+  "license": "ISC"
+}

@@ -1,0 +1,68 @@
+/* ===================================================================
+   JAIVIKSETU DESIGN TOKENS
+   Mehendi background, earthy organic palette & typography
+   =================================================================== */
+
+:root {
+  /* Brand Earthy Palette */
+  --mehendi: #D9C79A;
+  --mehendi-light: #EADFBE;
+  --mehendi-dark: #C6B381;
+  --cream: #FBF3DC;
+  --cream-card: #FFFAF0;
+  --cream-pure: #FFFDF8;
+  
+  /* Primary & Topic Colors */
+  --green-900: #1B4A2A;
+  --green-700: #235A31;
+  --green-600: #2F6B32;  /* Methods (primary brand) */
+  --green-500: #3C8341;
+  --green-400: #4FA347;  /* Highlights, success */
+  --green-100: #E6F3E6;
+  
+  --terracotta: #C4552D; /* Problems & challenges */
+  --terracotta-dark: #A53E19;
+  --terracotta-light: #FBECE7;
+  
+  --blue: #2C5AA0;       /* Government support */
+  --blue-dark: #1E3F72;
+  --blue-light: #EBF1FA;
+  
+  --saffron: #D9901A;    /* Campaign, action, CTAs */
+  --saffron-dark: #BA770E;
+  --saffron-light: #FEF5E7;
+  
+  --brown: #6B4A2A;      /* Accents, borders */
+  --brown-pattern: #8A5A2B;
+  --brown-faint: rgba(138, 90, 43, 0.10);
+  
+  --ink: #2B2414;        /* Body text */
+  --ink-muted: #574B32;
+  --ink-subtle: #7A6C4D;
+  --white: #FFFFFF;
+  
+  /* Typography */
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+  
+  /* Elevations & Shadows */
+  --shadow-sm: 0 2px 8px rgba(43, 36, 20, 0.06);
+  --shadow-md: 0 8px 24px rgba(43, 36, 20, 0.08);
+  --shadow-lg: 0 16px 36px rgba(43, 36, 20, 0.12);
+  --shadow-hover: 0 22px 45px rgba(43, 36, 20, 0.16);
+  
+  /* Border Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+  
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease-out;
+  --transition-normal: 0.35s ease-out;
+  --transition-slow: 0.6s var(--ease-smooth);
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Pesticides – Botanical Recipes & Pest Finder | JaivikSetu</title>
+  <meta name="description" content="Authentic recipes for natural organic pesticides: Neem NSKE, Dashaparni Ark, Garlic-Chilli spray, Jeevamrut, biological agents, and interactive Pest Finder matrix.">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <style>
+    /* Bottle-styled recipe card */
+    .bottle-recipe-card {
+      background: var(--cream-pure);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      border: 1px solid rgba(107, 74, 42, 0.15);
+      border-top: 6px solid var(--green-600);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+    .bottle-recipe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .bottle-cap-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--green-600);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .recipe-meta-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .recipe-meta-tag {
+      background: var(--mehendi-light);
+      color: var(--ink);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+    }
+    .recipe-box-sub {
+      background: var(--cream);
+      padding: 0.85rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAVBAR ONLY (NO SIDEBAR) -->
+  <header class="navbar-header inner-nav" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+            <path d="M12 22v-9" stroke-width="2.5"></path>
+            <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+            <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link active" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+          <span class="lang-icon">🌐</span> <span data-i18n="lang_btn">मराठी</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5rem;">
+    <!-- Header Banner -->
+    <section class="section-padding section-mehendi" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+          <span class="section-eyebrow eyebrow-terracotta" data-i18n="pest_eyebrow">Natural Crop Protection</span>
+          <h1 data-i18n="pest_title">Botanical Pesticides & Biological Defenses</h1>
+          <p style="font-size: 1.15rem; color: var(--ink);" data-i18n="pest_sub">
+            Control destructive sap-suckers and caterpillars without toxic chemical residues. Explore farm-crafted herbal concoctions, predatory bio-agents, and physical traps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMBEDDED INTERACTIVE PEST FINDER & REMEDY MATRIX (§6.4 & §7.2) -->
+    <section class="section-padding section-mehendi-light" id="pest-finder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-terracotta" data-i18n="pest_matrix_eyebrow">Interactive Diagnosis</span>
+          <h2 data-i18n="pest_matrix_title">Natural Pest Finder & Match Matrix</h2>
+          <p data-i18n="pest_matrix_sub">Select the targeted pest on your crops to examine verified organic botanical remedies and effectiveness indicators.</p>
+        </div>
+
+        <div class="pest-finder-card">
+          <!-- Pest Selection Pills -->
+          <div class="pest-pills" role="tablist">
+            <button type="button" class="pest-btn active" data-pest="aphids" onclick="selectPest('aphids')">Aphids (मावा / लाही)</button>
+            <button type="button" class="pest-btn" data-pest="whitefly" onclick="selectPest('whitefly')">Whitefly (पांढरी माशी)</button>
+            <button type="button" class="pest-btn" data-pest="caterpillar" onclick="selectPest('caterpillar')">Caterpillar & Pod Borers (अळी)</button>
+            <button type="button" class="pest-btn" data-pest="mites" onclick="selectPest('mites')">Mites (लाल कोळी)</button>
+            <button type="button" class="pest-btn" data-pest="fungal_rot" onclick="selectPest('fungal_rot')">Fungal Rot & Blight (करपा)</button>
+          </div>
+
+          <!-- Dynamic Comparison Matrix Table (PRD §7.2) -->
+          <div style="overflow-x: auto; margin-bottom: 2rem;">
+            <table class="remedy-matrix-table">
+              <thead>
+                <tr>
+                  <th data-i18n="pest_th_selected">Selected Pest</th>
+                  <th data-i18n="pest_th_neem">Neem Extract</th>
+                  <th data-i18n="pest_th_dasha">Dashaparni Ark</th>
+                  <th data-i18n="pest_th_garlic">Garlic-Chilli</th>
+                  <th data-i18n="pest_th_bio">Bio-Agents (Bt/Trichoderma)</th>
+                  <th data-i18n="pest_th_trap">Physical Traps</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="pest-table-name" style="color: var(--green-900);">Active Pest Match</td>
+                  <td id="pest-cell-neem"><span class="dot-effective"></span></td>
+                  <td id="pest-cell-dasha"><span class="dot-effective"></span></td>
+                  <td id="pest-cell-garlic"><span class="dot-effective"></span></td>
+                  <td id="pest-cell-bio"><span class="dot-ineffective"></span></td>
+                  <td id="pest-cell-trap"><span class="dot-effective"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Selected Pest Action Card -->
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 2rem; border-left: 6px solid var(--terracotta);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.75rem;">
+              <h3 id="pest-detail-name" style="color: var(--terracotta-dark); margin: 0; font-size: 1.35rem;">Aphids (मावा / लाही)</h3>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--green-600);" data-i18n-html="pest_legend">● High Effectiveness &nbsp; ○ Supplementary</span>
+            </div>
+            
+            <p id="pest-detail-desc" style="color: var(--ink); margin-bottom: 1.25rem;">
+              Soft-bodied sap-sucking pests clustering under tender shoots and leaves, excreting sticky honeydew that triggers sooty mold.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.25rem;">
+              <div style="background: var(--cream-pure); padding: 1rem; border-radius: var(--radius-sm);">
+                <strong style="color: var(--green-900); display: block; margin-bottom: 0.25rem;" data-i18n="pest_lbl_rec">Recommended Botanical Recipe:</strong>
+                <span id="pest-detail-recipe" style="font-size: 0.95rem; color: var(--ink);">Spray 5% Neem Seed Kernel Extract (NSKE) or Dashaparni Ark (200ml in 10L water). Repeat after 5 days.</span>
+              </div>
+              <div style="background: var(--cream-pure); padding: 1rem; border-radius: var(--radius-sm);">
+                <strong style="color: var(--blue-dark); display: block; margin-bottom: 0.25rem;">Trap & Cultural Practice:</strong>
+                <span id="pest-detail-trap" style="font-size: 0.95rem; color: var(--ink);">Yellow Sticky Traps (10 per acre) installed at crop canopy level.</span>
+              </div>
+            </div>
+
+            <!-- Mandatory Safety Caution Note (PRD §7.2) -->
+            <div style="background: var(--terracotta-light); color: var(--terracotta-dark); padding: 0.85rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 600;">
+              ⚠️ <strong>Mandatory Safety Rule:</strong> <span id="pest-detail-caution">Spray in the late evening (after 4:30 PM) to avoid leaf scorch and protect honeybees and pollinators.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 DETAILED RECIPE CARDS (BOTTLE STYLE §6.4 & §8.4) -->
+    <section class="section-padding section-mehendi" id="recipes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-green" data-i18n="rec_eyebrow">Authentic Formulations</span>
+          <h2 data-i18n="rec_title">6 Botanical & Biological Recipe Cards</h2>
+          <p data-i18n="rec_sub">Time-tested natural crop formulations with ingredient lists, preparation steps, and application dosages.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
+          
+          <!-- RECIPE 1: NEEM NSKE -->
+          <div class="bottle-recipe-card" id="neem">
+            <div>
+              <div class="bottle-cap-icon">🧴</div>
+              <div class="recipe-meta-row">
+                <span class="recipe-meta-tag" data-i18n="rec_meta_broad">BROAD SPECTRUM</span>
+                <span class="recipe-meta-tag" data-i18n="rec_meta_igr">REPELLENT & IGR</span>
+              </div>
+              <h3 style="color: var(--green-900); font-size: 1.35rem; margin-bottom: 0.5rem;" data-i18n="rec_1_title">1. Neem Seed Kernel Extract (NSKE 5%)</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1rem;" data-i18n="rec_1_desc">The premier botanical antifeedant, insect growth regulator, and oviposition deterrent containing pure Azadirachtin.</p>
+              
+              <div class="recipe-box-sub" data-i18n-html="rec_1_ing">
+                <strong>Ingredients:</strong> 5 kg dry neem seed kernels, 100L clean water, 200g natural khadi soap (emulsifier).
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_1_prep">
+                <strong>Preparation:</strong> Pound neem kernels into fine powder. Soak in 10L water overnight in muslin cloth bag. Squeeze extract into 100L water with dissolved soap.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_1_target">
+                <strong>Target Pests:</strong> Helicoverpa caterpillars, aphids, whiteflies, leaf miners, and thrips.
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(107, 74, 42, 0.15); padding-top: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--green-700); font-weight: 700;" data-i18n="rec_1_dose">
+              Dose: Spray 500ml NSKE per 10L knapsack sprayer in late evening.
+            </div>
+          </div>
+
+          <!-- RECIPE 2: DASHAPARNI ARK -->
+          <div class="bottle-recipe-card" id="dashaparni" style="border-top-color: var(--terracotta);">
+            <div>
+              <div class="bottle-cap-icon" style="background: var(--terracotta);">🌿</div>
+              <div class="recipe-meta-row">
+                <span class="recipe-meta-tag" data-i18n="rec_meta_10leaves">10 MEDICINAL LEAVES</span>
+                <span class="recipe-meta-tag" data-i18n="rec_meta_fermented">FERMENTED POTENT</span>
+              </div>
+              <h3 style="color: var(--terracotta-dark); font-size: 1.35rem; margin-bottom: 0.5rem;" data-i18n="rec_2_title">2. Dashaparni Ark (10-Leaf Decoction)</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1rem;" data-i18n="rec_2_desc">Potent Ayurvedic fermented pest repellent combining 10 bitter and medicinal leaves with indigenous cow urine.</p>
+              
+              <div class="recipe-box-sub" data-i18n-html="rec_2_ing">
+                <strong>Ingredients:</strong> Leaves of Neem, Karanj, Custard apple, Castor, Datura, Papaya, Marigold, Guava, Nirgundi, and Lantana (2 kg each) + 5 kg cow dung + 10L indigenous cow urine + 200L water.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_2_prep">
+                <strong>Preparation:</strong> Crush leaves, place in plastic drum with cow dung and urine. Ferment for 30–40 days in shade, stirring clockwise twice daily. Filter through fine muslin cloth.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_2_target">
+                <strong>Target Pests:</strong> Stem borers, leaf folders, sucking pests, and early instar caterpillars.
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(107, 74, 42, 0.15); padding-top: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--terracotta-dark); font-weight: 700;" data-i18n="rec_2_dose">
+              Dose: 200–250ml per 10L water. Shelf life up to 6 months in shade.
+            </div>
+          </div>
+
+          <!-- RECIPE 3: GARLIC-CHILLI-GINGER SPRAY -->
+          <div class="bottle-recipe-card" id="garlic-chilli" style="border-top-color: var(--saffron);">
+            <div>
+              <div class="bottle-cap-icon" style="background: var(--saffron);">🌶️</div>
+              <div class="recipe-meta-row">
+                <span class="recipe-meta-tag" data-i18n="rec_meta_irritant">CONTACT IRRITANT</span>
+                <span class="recipe-meta-tag" data-i18n="rec_meta_mites">MITES & THRIPS</span>
+              </div>
+              <h3 style="color: var(--ink); font-size: 1.35rem; margin-bottom: 0.5rem;" data-i18n="rec_3_title">3. Garlic-Chilli-Ginger Extract</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1rem;" data-i18n="rec_3_desc">Intense pungent contact spray using allicin and capsaicin to repel stubborn sucking insects and mites.</p>
+              
+              <div class="recipe-box-sub" data-i18n-html="rec_3_ing">
+                <strong>Ingredients:</strong> 500g garlic cloves, 500g spicy green chillies, 250g fresh ginger, 50g mild soap, 10L water.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_3_prep">
+                <strong>Preparation:</strong> Grind garlic and chillies separately into fine paste. Soak overnight in water. Boil gently for 15 minutes, cool, strain through muslin cloth, and add soap sticker.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_3_target">
+                <strong>Target Pests:</strong> Red spider mites, yellow thrips, whiteflies, and aphids on cotton & vegetables.
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(107, 74, 42, 0.15); padding-top: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--saffron-dark); font-weight: 700;" data-i18n="rec_3_dose">
+              Dose: Dilute 500ml stock extract in 15L water. Wet underside of leaves.
+            </div>
+          </div>
+
+          <!-- RECIPE 4: JEEVAMRUT & PANCHAGAVYA -->
+          <div class="bottle-recipe-card" id="jeevamrut">
+            <div>
+              <div class="bottle-cap-icon">🥛</div>
+              <div class="recipe-meta-row">
+                <span class="recipe-meta-tag" data-i18n="rec_meta_microbial">MICROBIAL INOCULANT</span>
+                <span class="recipe-meta-tag" data-i18n="rec_meta_cow">COW-BASED</span>
+              </div>
+              <h3 style="color: var(--green-900); font-size: 1.35rem; margin-bottom: 0.5rem;" data-i18n="rec_4_title">4. Jeevamrut, Beejamrut & Panchagavya</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1rem;" data-i18n="rec_4_desc">Fermented indigenous cow-derived microbial tonics that multiply billions of aerobic microbes per milliliter.</p>
+              
+              <div class="recipe-box-sub" data-i18n-html="rec_4_ing">
+                <strong>Jeevamrut:</strong> 10 kg desi cow dung + 10L cow urine + 2 kg jaggery + 2 kg pulse flour (besan) + handful of virgin forest soil in 200L water. Ferment 5–7 days.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_4_prep">
+                <strong>Beejamrut:</strong> Seed treatment concoction protecting young germinating seeds against soil-borne wilt and damping off.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_4_target">
+                <strong>Panchagavya:</strong> 5 sacred bovine products (milk, curd, ghee, dung, urine) + banana + jaggery for plant growth vigor.
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(107, 74, 42, 0.15); padding-top: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--green-700); font-weight: 700;" data-i18n="rec_4_dose">
+              Dose: 200L Jeevamrut per acre via drip or flood irrigation twice a month.
+            </div>
+          </div>
+
+          <!-- RECIPE 5: BENEFICIAL BIO-AGENTS -->
+          <div class="bottle-recipe-card" id="bio-agents" style="border-top-color: var(--blue);">
+            <div>
+              <div class="bottle-cap-icon" style="background: var(--blue);">🔬</div>
+              <div class="recipe-meta-row">
+                <span class="recipe-meta-tag" data-i18n="rec_meta_antagonists">LIVING ANTAGONISTS</span>
+                <span class="recipe-meta-tag" data-i18n="rec_meta_biopest">BIO-PESTICIDES</span>
+              </div>
+              <h3 style="color: var(--blue-dark); font-size: 1.35rem; margin-bottom: 0.5rem;" data-i18n="rec_5_title">5. Biological Parasitoids & Fungi</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1rem;" data-i18n="rec_5_desc">Harnessing friendly living organisms to parasitise insect eggs and destroy destructive fungal root pathogens.</p>
+              
+              <div class="recipe-box-sub" data-i18n-html="rec_5_ing">
+                <strong>Trichogramma Chilonis:</strong> Tiny egg parasitoid wasps released via egg cards (50,000/ha). Parasitises caterpillar eggs before they can hatch.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_5_prep">
+                <strong>Trichoderma Viride / Harzianum:</strong> Antagonistic soil fungus that devours Fusarium, Rhizoctonia, and Pythium root rot.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_5_target">
+                <strong>Bacillus thuringiensis (Bt):</strong> Biological protein crystals toxic strictly to caterpillars when ingested.
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(107, 74, 42, 0.15); padding-top: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--blue-dark); font-weight: 700;" data-i18n="rec_5_dose">
+              Dose: Mix 1kg Trichoderma in 100kg farm compost for soil application.
+            </div>
+          </div>
+
+          <!-- RECIPE 6: PHYSICAL TRAPS & TRAP CROPS -->
+          <div class="bottle-recipe-card" id="traps" style="border-top-color: var(--saffron);">
+            <div>
+              <div class="bottle-cap-icon" style="background: var(--saffron);">🪤</div>
+              <div class="recipe-meta-row">
+                <span class="recipe-meta-tag" data-i18n="rec_meta_nonchemical">NON-CHEMICAL CONTROL</span>
+                <span class="recipe-meta-tag" data-i18n="rec_meta_trapping">TRAPPING</span>
+              </div>
+              <h3 style="color: var(--ink); font-size: 1.35rem; margin-bottom: 0.5rem;" data-i18n="rec_6_title">6. Traps, Lures & Trap Crops</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1rem;" data-i18n="rec_6_desc">Eco-friendly mechanical defenses that monitor and capture adult breeding pests without spraying any liquid.</p>
+              
+              <div class="recipe-box-sub" data-i18n-html="rec_6_ing">
+                <strong>Yellow & Blue Sticky Traps:</strong> Yellow cards (10–12/acre) attract whiteflies & aphids. Blue cards attract thrips.
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_6_prep">
+                <strong>Pheromone Funnel Traps:</strong> Species-specific female sex pheromone lures (Helilure, Spodolure) capturing male moths (5/acre).
+              </div>
+              <div class="recipe-box-sub" data-i18n-html="rec_6_target">
+                <strong>Trap Crops (Marigold & Maize):</strong> African marigolds planted around tomato crops lure away fruit borers and suppress root nematodes.
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(107, 74, 42, 0.15); padding-top: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--saffron-dark); font-weight: 700;" data-i18n="rec_6_dose">
+              Installation: Erect traps 1 ft above crop canopy; replace lures every 25 days.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-hill-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0,32 C360,0 720,48 1080,16 C1260,0 1380,24 1440,32 L1440,48 L0,48 Z"></path></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+                <path d="M12 22v-9" stroke-width="2.5"></path>
+                <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+                <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+              </svg>
+            </div>
+            <div class="brand-name"><span style="color: #ffffff;">Jaivik</span><span style="color: #FFE58F;">Setu</span></div>
+          </div>
+          <p data-i18n="footer_tagline">Bridging Indian farmers, students, and home gardeners to sustainable organic agriculture.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="learn.html" data-i18n="nav_learn">Learn</a></li>
+            <li><a href="composting.html" data-i18n="nav_compost">Composting</a></li>
+            <li><a href="pesticides.html" data-i18n="nav_pesticides">Natural Pesticides</a></li>
+            <li><a href="field-practices.html" data-i18n="nav_practices">Field Practices</a></li>
+            <li><a href="schemes.html" data-i18n="nav_schemes">Schemes & Certification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_guides_title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="#pest-finder" data-i18n="footer_tool_pest">Pest Finder Diagnostic</a></li>
+            <li><a href="tools.html#calculator" data-i18n="footer_tool_calc">Compost Calculator</a></li>
+            <li><a href="tools.html#quiz" data-i18n="footer_tool_quiz">Suitability Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_downloads_title">Printable Guides</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('pesticide')" data-i18n="footer_dl_pesticide">📄 Pesticide Recipes Pocket Card</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')" data-i18n="footer_dl_compost">📄 Compost Cheat-Sheet</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer-box">
+        <strong style="color: #FFE9A8; display: block; margin-bottom: 0.25rem;" data-i18n="footer_disclaimer_title">Educational Disclaimer:</strong>
+        <span data-i18n="footer_disclaimer">All botanical remedies should be patch-tested on a few branches before whole-field spraying. Never spray during peak pollination hours.</span>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 JaivikSetu. All rights reserved. Open-access awareness initiative for Indian Agriculture.</span>
+        <span data-i18n="footer_made_with">Made with 💚 for Indian Farmers</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="download-modal" onclick="if(event.target===this) closeDownloadModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeDownloadModal()">✕</button>
+      <h3 id="modal-guide-title">JaivikSetu Practical Guide</h3>
+      <div id="modal-guide-content"></div>
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button type="button" class="btn btn-outline-dark" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button type="button" class="btn btn-primary" onclick="closeDownloadModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

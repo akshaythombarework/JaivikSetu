@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Practices – Crop Rotation, Mulching & Drip Systems | JaivikSetu</title>
+  <meta name="description" content="Discover core organic field practices: legume crop rotation, multispecies intercropping, organic mulching, water-efficient drip irrigation, and heirloom desi seeds.">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <style>
+    .practice-card {
+      background: var(--cream-pure);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid rgba(107, 74, 42, 0.15);
+      border-left: 6px solid var(--brown);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .practice-card { grid-template-columns: 1fr; }
+    }
+    .benefit-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .benefit-chip {
+      background: var(--green-100);
+      color: var(--green-900);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(47, 107, 50, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAVBAR ONLY (NO SIDEBAR) -->
+  <header class="navbar-header inner-nav" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+            <path d="M12 22v-9" stroke-width="2.5"></path>
+            <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+            <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+          <span class="lang-icon">🌐</span> <span data-i18n="lang_btn">मराठी</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5rem;">
+    <!-- Banner Header -->
+    <section class="section-padding section-mehendi" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+          <span class="section-eyebrow eyebrow-green" data-i18n="fp_eyebrow">Agroecological Management</span>
+          <h1 data-i18n="fp_title">Sustainable Field Practices</h1>
+          <p style="font-size: 1.15rem; color: var(--ink);" data-i18n="fp_sub">
+            Biological systems replace chemical interventions through smart crop geometry, organic soil blankets, pulse nitrogen fixation, and precision water drops.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICES LIST -->
+    <section class="section-padding section-mehendi-light">
+      <div class="container">
+        
+        <!-- Practice 1: Legume Crop Rotation -->
+        <div class="practice-card" id="rotation">
+          <div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--green-600); text-transform: uppercase;" data-i18n="fp_1_eyebrow">PRACTICE 01</span>
+            <h2 style="color: var(--green-900); margin: 0.35rem 0 0.75rem 0;" data-i18n="fp_1_title">Legume Crop Rotation & Soil Nitrogen</h2>
+            <p style="color: var(--ink-muted); font-size: 0.95rem;" data-i18n="fp_1_desc">
+              Monoculture depletes specific soil nutrient horizons and creates rampant pest reservoirs. Rotating heavy feeders (cotton, maize, wheat) with symbiotic nitrogen-fixing legumes (chickpea, pigeon pea, green gram, cowpea) breaks pest lifecycles and deposits up to 50–70 kg atmospheric nitrogen per hectare into the soil without a single bag of synthetic urea.
+            </p>
+            <div class="benefit-chips-row">
+              <span class="benefit-chip" data-i18n="fp_1_chip_1">🌿 Breaks Pest Cycles</span>
+              <span class="benefit-chip" data-i18n="fp_1_chip_2">🌱 Biological Nitrogen Fixation</span>
+              <span class="benefit-chip" data-i18n="fp_1_chip_3">💰 Eliminates Urea Purchase</span>
+              <span class="benefit-chip" data-i18n="fp_1_chip_4">📉 Improves Soil Aggregates</span>
+            </div>
+          </div>
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid rgba(107, 74, 42, 0.15);">
+            <strong style="color: var(--green-900); display: block; margin-bottom: 0.5rem;" data-i18n="fp_1_seq_title">Recommended Rotation Sequence:</strong>
+            <ul style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--ink-muted);">
+              <li data-i18n-html="fp_1_seq_1"><strong>Kharif Season:</strong> Cotton / Soybean intercropped with Pigeon Pea (Tur).</li>
+              <li data-i18n-html="fp_1_seq_2"><strong>Rabi Season:</strong> Chickpea (Chana) or Wheat with Mustard borders.</li>
+              <li data-i18n-html="fp_1_seq_3"><strong>Summer Fallow:</strong> Fast 45-day Green Manure (Dhaincha / Sunhemp).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Practice 2: Intercropping & Cover Crops -->
+        <div class="practice-card" id="intercropping" style="border-left-color: var(--green-600);">
+          <div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--green-600); text-transform: uppercase;" data-i18n="fp_2_eyebrow">PRACTICE 02</span>
+            <h2 style="color: var(--green-900); margin: 0.35rem 0 0.75rem 0;" data-i18n="fp_2_title">Multispecies Intercropping & Trap Crops</h2>
+            <p style="color: var(--ink-muted); font-size: 0.95rem;" data-i18n="fp_2_desc">
+              Planting complementary companion species simultaneously in alternating field rows maximizes solar harvest and provides biological pest barriers. Tall crops like maize or sorghum act as windbreaks and physical barricades against flying aphids, while fragrant marigolds release root exudates that paralyze harmful parasitic nematodes.
+            </p>
+            <div class="benefit-chips-row">
+              <span class="benefit-chip" data-i18n="fp_2_chip_1">🌻 Natural Trap Cropping</span>
+              <span class="benefit-chip" data-i18n="fp_2_chip_2">☀️ 100% Sunlight Capture</span>
+              <span class="benefit-chip" data-i18n="fp_2_chip_3">🐝 Attracts Beneficial Pollinators</span>
+              <span class="benefit-chip" data-i18n="fp_2_chip_4">🛡️ Biological Insurance Against Crop Failure</span>
+            </div>
+          </div>
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid rgba(107, 74, 42, 0.15);">
+            <strong style="color: var(--green-900); display: block; margin-bottom: 0.5rem;" data-i18n="fp_2_combo_title">Proven Companion Combinations:</strong>
+            <ul style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--ink-muted);">
+              <li data-i18n-html="fp_2_combo_1"><strong>Cotton + Cowpea (4:1):</strong> Cowpea attracts ladybird beetles that eat cotton bollworms.</li>
+              <li data-i18n-html="fp_2_combo_2"><strong>Tomato + African Marigold (8:1):</strong> Marigold acts as decoy for fruit borers.</li>
+              <li data-i18n-html="fp_2_combo_3"><strong>Maize + Cowpea + Pumpkin:</strong> The ancient "Three Sisters" synergy.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Practice 3: Organic Biomass Mulching -->
+        <div class="practice-card" id="mulching" style="border-left-color: var(--saffron);">
+          <div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron); text-transform: uppercase;" data-i18n="fp_3_eyebrow">PRACTICE 03</span>
+            <h2 style="color: var(--green-900); margin: 0.35rem 0 0.75rem 0;" data-i18n="fp_3_title">Organic Mulching (Soil Living Blanket)</h2>
+            <p style="color: var(--ink-muted); font-size: 0.95rem;" data-i18n="fp_3_desc">
+              Bare soil is an open wound. Covering farm beds with a 3–4 inch protective blanket of dried crop straw, sugarcane trash, or dry tree leaves keeps soil temperature 5°C cooler in summer heat, reduces soil water evaporation by over 60%, and completely smothers weed seeds by blocking sunlight.
+            </p>
+            <div class="benefit-chips-row">
+              <span class="benefit-chip" data-i18n="fp_3_chip_1">💧 60% Water Conservation</span>
+              <span class="benefit-chip" data-i18n="fp_3_chip_2">🚫 Complete Weed Suppression</span>
+              <span class="benefit-chip" data-i18n="fp_3_chip_3">🌡️ Prevents Soil Heat Stress</span>
+              <span class="benefit-chip" data-i18n="fp_3_chip_4">🪱 Earthworm Highway Habitat</span>
+            </div>
+          </div>
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid rgba(107, 74, 42, 0.15);">
+            <strong style="color: var(--green-900); display: block; margin-bottom: 0.5rem;" data-i18n="fp_3_rule_title">Mulching Golden Rules:</strong>
+            <ul style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--ink-muted);">
+              <li data-i18n="fp_3_rule_1">Keep mulch 2 inches away from plant stems to avoid stem rot.</li>
+              <li data-i18n="fp_3_rule_2">Spray Jeevamrut over dry mulch to speed up decomposition into humus.</li>
+              <li data-i18n="fp_3_rule_3">Use on-farm crop stalks rather than burning fields (anti-stubble burning).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Practice 4: Micro-Drip Irrigation -->
+        <div class="practice-card" id="drip" style="border-left-color: var(--blue);">
+          <div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue); text-transform: uppercase;" data-i18n="fp_4_eyebrow">PRACTICE 04</span>
+            <h2 style="color: var(--green-900); margin: 0.35rem 0 0.75rem 0;" data-i18n="fp_4_title">Precision Drip Irrigation & Water Care</h2>
+            <p style="color: var(--ink-muted); font-size: 0.95rem;" data-i18n="fp_4_desc">
+              Flood irrigation causes topsoil erosion, anaerobic suffocating waterlogging, and excessive weed outbreaks in field furrows. Precision drip delivery applies micro-metered droplets directly to the active plant rhizosphere, cutting water consumption by 50% while allowing direct fertigation of filtered Vermiwash and liquid bio-fertilizers.
+            </p>
+            <div class="benefit-chips-row">
+              <span class="benefit-chip" data-i18n="fp_4_chip_1">💦 50% Water Savings</span>
+              <span class="benefit-chip" data-i18n="fp_4_chip_2">🌾 Fertigation of Organic Teas</span>
+              <span class="benefit-chip" data-i18n="fp_4_chip_3">🚫 Zero Furrow Weed Surge</span>
+              <span class="benefit-chip" data-i18n="fp_4_chip_4">⚡ Lower Pumping Electricity</span>
+            </div>
+          </div>
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid rgba(107, 74, 42, 0.15);">
+            <strong style="color: var(--green-900); display: block; margin-bottom: 0.5rem;" data-i18n="fp_4_water_title">Organic Fertigation Protocol:</strong>
+            <ul style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--ink-muted);">
+              <li data-i18n="fp_4_water_1">Filter Jeevamrut or Vermiwash through 3 layers of fine muslin cloth.</li>
+              <li data-i18n="fp_4_water_2">Flush drip lateral lines with clean water for 15 minutes after foliar dosing.</li>
+              <li data-i18n="fp_4_water_3">Avail 55–80% government subsidy under PMKSY (Per Drop More Crop).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Practice 5: Indigenous Desi Seeds & Beejamrut -->
+        <div class="practice-card" id="seeds" style="border-left-color: var(--green-600);">
+          <div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--green-600); text-transform: uppercase;" data-i18n="fp_5_eyebrow">PRACTICE 05</span>
+            <h2 style="color: var(--green-900); margin: 0.35rem 0 0.75rem 0;" data-i18n="fp_5_title">Heirloom Desi Seeds & Beejamrut Inoculation</h2>
+            <p style="color: var(--ink-muted); font-size: 0.95rem;" data-i18n="fp_5_desc">
+              Hybrid seeds are bred for synthetic chemical responsiveness and cannot be safely re-sown. Traditional heirloom open-pollinated desi seeds possess centuries of acclimatization against local droughts, pest outbreaks, and heat spells. Coating seeds with cow-dung Beejamrut before sowing inoculates the seedling with protective beneficial endophytes.
+            </p>
+            <div class="benefit-chips-row">
+              <span class="benefit-chip" data-i18n="fp_5_chip_1">🌰 100% Seed Sovereignty</span>
+              <span class="benefit-chip" data-i18n="fp_5_chip_2">🛡️ Natural Climate Hardiness</span>
+              <span class="benefit-chip" data-i18n="fp_5_chip_3">🦠 Beejamrut Biological Shield</span>
+              <span class="benefit-chip" data-i18n="fp_5_chip_4">🌾 Rich Indigenous Nutrition & Taste</span>
+            </div>
+          </div>
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid rgba(107, 74, 42, 0.15);">
+            <strong style="color: var(--green-900); display: block; margin-bottom: 0.5rem;" data-i18n="fp_5_recipe_title">Beejamrut Seed Treatment:</strong>
+            <p style="font-size: 0.9rem; color: var(--ink-muted); margin: 0;" data-i18n="fp_5_recipe_desc">
+              Mix 5 kg cow dung, 5L cow urine, 50g virgin forest lime, and handful of virgin soil in 20L water. Smear gently onto seeds with bare hands. Dry in shade for 2 hours before sowing.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-hill-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0,32 C360,0 720,48 1080,16 C1260,0 1380,24 1440,32 L1440,48 L0,48 Z"></path></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+                <path d="M12 22v-9" stroke-width="2.5"></path>
+                <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+                <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+              </svg>
+            </div>
+            <div class="brand-name"><span style="color: #ffffff;">Jaivik</span><span style="color: #FFE58F;">Setu</span></div>
+          </div>
+          <p data-i18n="footer_tagline">Bridging Indian farmers, students, and home gardeners to sustainable organic agriculture.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="learn.html" data-i18n="nav_learn">Learn</a></li>
+            <li><a href="composting.html" data-i18n="nav_compost">Composting</a></li>
+            <li><a href="pesticides.html" data-i18n="nav_pesticides">Natural Pesticides</a></li>
+            <li><a href="field-practices.html" data-i18n="nav_field">Field Practices</a></li>
+            <li><a href="schemes.html" data-i18n="nav_schemes">Schemes & Certification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_guides_title">Tools & Aids</h4>
+          <ul class="footer-links">
+            <li><a href="tools.html#calculator" data-i18n="tool_calc_title">Compost Calculator</a></li>
+            <li><a href="tools.html#pest-finder" data-i18n="tool_pest_title">Pest Finder Matrix</a></li>
+            <li><a href="tools.html#quiz" data-i18n="tool_quiz_title">Suitability Quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_downloads_title">Printable Guides</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')" data-i18n="pdf_compost">📄 Compost Cheat-Sheet</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('schemes')" data-i18n="pdf_schemes">📄 Scheme Application Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer-box">
+        <strong style="color: #FFE9A8; display: block; margin-bottom: 0.25rem;" data-i18n="footer_disclaimer_title">Educational Disclaimer:</strong>
+        <span data-i18n="footer_disclaimer">Field practices should be adapted to local agro-climatic zones and soil classifications. Consult local agriculture extension wings for regional cropping calendars.</span>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 JaivikSetu. All rights reserved. Open-access awareness initiative for Indian Agriculture.</span>
+        <span data-i18n="footer_made_with">Made with 💚 for Indian Farmers</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="download-modal" onclick="if(event.target===this) closeDownloadModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeDownloadModal()">✕</button>
+      <h3 id="modal-guide-title">JaivikSetu Practical Guide</h3>
+      <div id="modal-guide-content"></div>
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button type="button" class="btn btn-outline-dark" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button type="button" class="btn btn-primary" onclick="closeDownloadModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | JaivikSetu</title>
+  <meta name="description" content="The page you are looking for does not exist on JaivikSetu. Explore our composting guides, natural pesticide recipes, or government schemes.">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <style>
+    .notfound-wrapper {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+    }
+    .notfound-card {
+      background: var(--cream-pure);
+      border: 1px solid rgba(47, 107, 50, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      max-width: 680px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    .notfound-badge {
+      display: inline-block;
+      background: var(--earth-gold);
+      color: #3b2a0c;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1rem;
+    }
+    .notfound-icon {
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: floatLeaf 3s ease-in-out infinite;
+    }
+    @keyframes floatLeaf {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(4deg); }
+    }
+    .notfound-shortcuts {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+      width: 100%;
+    }
+    .shortcut-pill {
+      background: var(--cream-warm);
+      border: 1px solid rgba(107, 74, 42, 0.15);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 0.5rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all var(--transition-fast);
+    }
+    .shortcut-pill:hover {
+      background: var(--cream-pure);
+      border-color: var(--green);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      color: var(--green);
+    }
+    .shortcut-pill span.icon {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <header class="navbar-header inner-nav" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+            <path d="M12 22v-9" stroke-width="2.5"></path>
+            <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+            <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+          <span class="lang-icon">🌐</span> <span data-i18n="lang_btn">मराठी</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="notfound-wrapper">
+      <div class="notfound-card">
+        <div class="notfound-icon">🌱</div>
+        <span class="notfound-badge" data-i18n="notfound_eyebrow">Error 404</span>
+        <h1 style="margin: 0.5rem 0 1rem; font-size: 2.2rem; color: var(--green-900);" data-i18n="notfound_title">Page Not Found</h1>
+        <p style="color: var(--ink-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;" data-i18n="notfound_sub">
+          Looks like this seed hasn't sprouted yet or this path has been harvested. Let's get you back on fertile ground.
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="index.html" class="btn btn-primary" data-i18n="notfound_btn_home">Back to Home ➔</a>
+          <a href="tools.html" class="btn btn-secondary" data-i18n="notfound_btn_tools">Explore Smart Tools ➔</a>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: left;">
+          <span style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted);" data-i18n="notfound_quick_title">Helpful Shortcuts</span>
+          <div class="notfound-shortcuts">
+            <a href="learn.html" class="shortcut-pill">
+              <span class="icon">📖</span>
+              <span data-i18n="nav_learn">Learn</span>
+            </a>
+            <a href="composting.html" class="shortcut-pill">
+              <span class="icon">🍂</span>
+              <span data-i18n="nav_compost">Composting</span>
+            </a>
+            <a href="pesticides.html" class="shortcut-pill">
+              <span class="icon">🌿</span>
+              <span data-i18n="nav_pesticides">Pesticides</span>
+            </a>
+            <a href="schemes.html" class="shortcut-pill">
+              <span class="icon">📜</span>
+              <span data-i18n="nav_schemes">Schemes</span>
+            </a>
+            <a href="campaign.html" class="shortcut-pill">
+              <span class="icon">📢</span>
+              <span data-i18n="nav_campaign">Campaign</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <div class="brand-name" style="font-size: 1.4rem;">
+            <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; line-height: 1.6;" data-i18n="footer_brand_desc">
+          Bridging India's awareness and adoption gap in organic farming through open-access scientific guides, practical farmer tools, and policy navigation.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_col_nav">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="field-practices.html" data-i18n="nav_field">Field Practices</a></li>
+          <li><a href="schemes.html" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" data-i18n="nav_tools">Tools</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_col_dl">Free Resources (PDF)</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')" data-i18n="pdf_compost">📄 Compost Cheat-Sheet</a></li>
+          <li><a href="javascript:void(0)" onclick="openDownloadModal('pesticide')" data-i18n="pdf_pesticide">📄 Pesticide Recipes Card</a></li>
+          <li><a href="javascript:void(0)" onclick="openDownloadModal('schemes')" data-i18n="pdf_schemes">📄 Scheme Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_col_gov">Government Portals</h4>
+        <ul class="footer-links">
+          <li><a href="https://pgsindia-ncof.gov.in" target="_blank" rel="noopener">PGS-India Portal ↗</a></li>
+          <li><a href="https://jaivikbharat.fssai.gov.in" target="_blank" rel="noopener">Jaivik Bharat FSSAI ↗</a></li>
+          <li><a href="https://apeda.gov.in" target="_blank" rel="noopener">APEDA NPOP ↗</a></li>
+          <li><a href="https://naturalfarming.dac.gov.in" target="_blank" rel="noopener">National Natural Farming ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p data-i18n="footer_copy">© 2026 JaivikSetu. An Open-Access Public Good Initiative. Dedicated to India's farming communities.</p>
+        <p style="font-size: 0.8rem; opacity: 0.8;" data-i18n="footer_disclaimer">Information synthesized from ICAR, APEDA, NCOF, and IFOAM publications.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

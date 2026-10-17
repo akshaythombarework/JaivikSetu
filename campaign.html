@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awareness Campaign & Community Action | JaivikSetu</title>
+  <meta name="description" content="JaivikSetu grassroots campaign roadmap: village composting workshops, Marathi and Hindi awareness pamphlets, youth college drives, and volunteer feedback.">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      background: var(--cream-pure);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(107, 74, 42, 0.15);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .gallery-img-box {
+      height: 200px;
+      background: var(--green-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 3rem;
+      position: relative;
+    }
+    .gallery-caption {
+      padding: 1.25rem;
+    }
+    .gallery-caption h4 {
+      color: var(--green-900);
+      margin-bottom: 0.35rem;
+      font-size: 1.1rem;
+    }
+    .gallery-caption p {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      margin: 0;
+    }
+    /* Star rating */
+    .star-rating {
+      display: flex;
+      gap: 0.35rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #D9901A;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAVBAR ONLY (NO SIDEBAR) -->
+  <header class="navbar-header inner-nav" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+            <path d="M12 22v-9" stroke-width="2.5"></path>
+            <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+            <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link active" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+          <span class="lang-icon">🌐</span> <span data-i18n="lang_btn">मराठी</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5rem;">
+    <!-- Page Header Banner -->
+    <section class="section-padding section-mehendi" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="camp_eyebrow">Movement & Outreach</span>
+          <h1 data-i18n="camp_title">JaivikSetu Awareness Campaign</h1>
+          <p style="font-size: 1.15rem; color: var(--ink);" data-i18n="camp_sub">
+            Empowering Indian grassroots farming communities with live composting demonstrations, local language pamphlets, youth college drives, and transparent market linkages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPAIGN ROADMAP (SAFFRON THEME PRD §6.8 & §8.8) -->
+    <section class="section-padding section-mehendi-light" id="roadmap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="camp_road_eyebrow">Action Roadmap</span>
+          <h2 data-i18n="camp_road_title">The 4 Pillars of Grassroots Action</h2>
+          <p data-i18n="camp_road_sub">Our four-stage strategic rollout bridging technical research to practical rural implementation.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
+          <div class="card card-topic-action">
+            <span style="font-size: 2.2rem; display: block; margin-bottom: 0.5rem;">🚜</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron); text-transform: uppercase;" data-i18n="stage_1_badge">STAGE 1</span>
+            <h3 style="font-size: 1.25rem; margin: 0.35rem 0;" data-i18n="stage_1_title">Village Live Workshops</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--ink-muted);" data-i18n="stage_1_desc">
+              Organizing live community demonstrations where farmers collaboratively construct NADEP brick tanks and ferment fresh Dashaparni Ark on village common land.
+            </p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--green-700);" data-i18n="stage_1_target">Target: 250+ Village Panchayats</span>
+          </div>
+
+          <div class="card card-topic-action">
+            <span style="font-size: 2.2rem; display: block; margin-bottom: 0.5rem;">📑</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron); text-transform: uppercase;" data-i18n="stage_2_badge">STAGE 2</span>
+            <h3 style="font-size: 1.25rem; margin: 0.35rem 0;" data-i18n="stage_2_title">Regional Language Pamphlets</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--ink-muted);" data-i18n="stage_2_desc">
+              Printing and circulating illustrated, clear Marathi and Hindi recipe cards and scheme application forms across weekly rural agricultural haats and mandis.
+            </p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--green-700);" data-i18n="stage_2_target">Target: 50,000+ Printed Pocket Guides</span>
+          </div>
+
+          <div class="card card-topic-action">
+            <span style="font-size: 2.2rem; display: block; margin-bottom: 0.5rem;">🎓</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron); text-transform: uppercase;" data-i18n="stage_3_badge">STAGE 3</span>
+            <h3 style="font-size: 1.25rem; margin: 0.35rem 0;" data-i18n="stage_3_title">School & College Drives</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--ink-muted);" data-i18n="stage_3_desc">
+              Setting up balcony kitchen waste composting systems and biological soil labs in schools and agricultural colleges to cultivate the next generation of agroecologists.
+            </p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--green-700);" data-i18n="stage_3_target">Target: 100+ Youth Green Clubs</span>
+          </div>
+
+          <div class="card card-topic-action">
+            <span style="font-size: 2.2rem; display: block; margin-bottom: 0.5rem;">📦</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--saffron); text-transform: uppercase;" data-i18n="stage_4_badge">STAGE 4</span>
+            <h3 style="font-size: 1.25rem; margin: 0.35rem 0;" data-i18n="stage_4_title">FPO Links & QR Recipes</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--ink-muted);" data-i18n="stage_4_desc">
+              Assisting Farmer Producer Organizations with QR-tagged packaging that links consumers directly to the farmer's verified organic preparation logs and PGS certificates.
+            </p>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--green-700);" data-i18n="stage_4_target">Target: 30+ Organic Clusters</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION (§6.8) -->
+    <section class="section-padding section-mehendi" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-green" data-i18n="gallery_eyebrow">Field Highlights</span>
+          <h2 data-i18n="gallery_title">Awareness Campaign Field Gallery</h2>
+          <p data-i18n="gallery_sub">Scenes from live community workshops, composting demos, and agricultural exhibitions across Maharashtra and Central India.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-img-box" style="background: linear-gradient(135deg, #2F6B32, #1B4A2A);">
+              <span>🧑‍🌾</span>
+            </div>
+            <div class="gallery-caption">
+              <h4 data-i18n="gal_1_title">Live NADEP Tank Construction</h4>
+              <p data-i18n="gal_1_desc">Farmers in Nashik district building honeycomb aeration brick tanks for cluster residue composting.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-img-box" style="background: linear-gradient(135deg, #D9901A, #BA770E);">
+              <span>🌿</span>
+            </div>
+            <div class="gallery-caption">
+              <h4 data-i18n="gal_2_title">Dashaparni Ark Formulation</h4>
+              <p data-i18n="gal_2_desc">Hands-on boiling and 30-day anaerobic barrel preparation of 10-leaf botanical pest repellent.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-img-box" style="background: linear-gradient(135deg, #2C5AA0, #1E3F72);">
+              <span>🏫</span>
+            </div>
+            <div class="gallery-caption">
+              <h4 data-i18n="gal_3_title">Agricultural College Seminar</h4>
+              <p data-i18n="gal_3_desc">Demonstrating microscope soil health assays and beneficial mycorrhizal spore counts to students.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-item-inner">
+              <div class="gallery-img-box" style="background: linear-gradient(135deg, #C4552D, #8B3A1C);">
+                <span>🧺</span>
+              </div>
+              <div class="gallery-caption">
+                <h4 data-i18n="gal_4_title">Rural Haat Guide Distribution</h4>
+                <p data-i18n="gal_4_desc">Distributing free waterproof Marathi organic quick-reference cheat-sheets at weekly village markets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINTABLE PAMPHLETS & DOWNLOADS (§7.7) -->
+    <section class="section-padding section-mehendi-light" id="downloads">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-saffron">Printable Resources</span>
+          <h2>Download Free One-Page Cheat-Sheets</h2>
+          <p>Formatted for standard A4 paper printing. Perfect for farm boards, community centers, and home refrigerators.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="card card-topic-methods" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">📄</span>
+              <h3>Composting Methods Cheat-Sheet</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);">Full reference table of brown-to-green ratios, moisture thresholds, turning calendars, and troubleshooting fixes.</p>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="openDownloadModal('compost')" style="margin-top: 1rem; justify-content: center;">View & Print PDF 🖨️</button>
+          </div>
+
+          <div class="card card-topic-problems" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🧴</span>
+              <h3>Natural Pesticides Recipe Card</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);">Accurate botanical ratios for NSKE 5%, Dashaparni Ark, garlic-chilli spray, and essential pollinator safety precautions.</p>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="openDownloadModal('pesticide')" style="margin-top: 1rem; justify-content: center;">View & Print PDF 🖨️</button>
+          </div>
+
+          <div class="card card-topic-schemes" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">📜</span>
+              <h3>Government Schemes & PGS Guide</h3>
+              <p style="font-size: 0.95rem; color: var(--ink-muted);">Summary of PKVY financial assistance, NMNF criteria, and step-by-step registration instructions for smallholder groups.</p>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="openDownloadModal('schemes')" style="margin-top: 1rem; justify-content: center;">View & Print PDF 🖨️</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK & VOLUNTEER FORM (PRD §7.8) -->
+    <section class="section-padding section-mehendi" id="feedback">
+      <div class="container">
+        <div style="max-width: 720px; margin: 0 auto; background: var(--cream-pure); border-radius: var(--radius-xl); padding: 3rem; box-shadow: var(--shadow-lg); border: 1px solid rgba(107, 74, 42, 0.15);">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="section-eyebrow eyebrow-saffron">Community Feedback</span>
+            <h2 style="margin: 0.25rem 0 0.5rem 0;">Share Your Voice & Request Workshops</h2>
+            <p style="color: var(--ink-muted); font-size: 0.95rem;">Are you a farmer, home gardener, or NGO volunteer? Let us know how JaivikSetu can support your organic journey.</p>
+          </div>
+
+          <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+            <div class="form-group">
+              <label for="fb-name" class="form-label">Full Name (Optional):</label>
+              <input type="text" id="fb-name" class="form-input" placeholder="e.g. Ramesh Patil / Priya Sharma">
+            </div>
+
+            <div class="form-group">
+              <label for="fb-role" class="form-label">Your Primary Role / Interest:</label>
+              <select id="fb-role" class="form-select" required>
+                <option value="farmer">Small / Marginal Farmer</option>
+                <option value="gardener">Urban Home / Balcony Gardener</option>
+                <option value="student">Student / Agricultural Researcher</option>
+                <option value="ngo">NGO Volunteer / Community Organizer</option>
+                <option value="fpo">Farmer Producer Organization (FPO) Member</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fb-rating" class="form-label">Platform Experience Rating:</label>
+              <select id="fb-rating" class="form-select">
+                <option value="5">⭐⭐⭐⭐⭐ 5 - Outstanding & Highly Practical</option>
+                <option value="4">⭐⭐⭐⭐ 4 - Very Informative</option>
+                <option value="3">⭐⭐⭐ 3 - Good / Useful</option>
+                <option value="2">⭐⭐ 2 - Needs More Local Language Content</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fb-message" class="form-label">Your Message, Question, or Workshop Request:</label>
+              <textarea id="fb-message" class="form-textarea" rows="4" placeholder="Tell us about your soil type, crops, or if you'd like printed pamphlets in your village..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.05rem;">
+              🌱 Submit Community Feedback
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-hill-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0,32 C360,0 720,48 1080,16 C1260,0 1380,24 1440,32 L1440,48 L0,48 Z"></path></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+                <path d="M12 22v-9" stroke-width="2.5"></path>
+                <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+                <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+              </svg>
+            </div>
+            <div class="brand-name"><span style="color: #ffffff;">Jaivik</span><span style="color: #FFE58F;">Setu</span></div>
+          </div>
+          <p data-i18n="footer_tagline">Bridging Indian farmers, students, and home gardeners to sustainable organic agriculture.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="composting.html">Composting</a></li>
+            <li><a href="pesticides.html">Natural Pesticides</a></li>
+            <li><a href="field-practices.html">Field Practices</a></li>
+            <li><a href="schemes.html">Schemes & Certification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Campaign Links</h4>
+          <ul class="footer-links">
+            <li><a href="#roadmap">Action Roadmap</a></li>
+            <li><a href="#gallery">Field Gallery</a></li>
+            <li><a href="#downloads">Printable Guides</a></li>
+            <li><a href="#feedback">Feedback Form</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Printable Guides</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')">📄 Compost Cheat-Sheet</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('pesticide')">📄 Pesticide Recipes Card</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('schemes')">📄 Scheme Summary</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer-box">
+        <strong style="color: #FFE9A8; display: block; margin-bottom: 0.25rem;">Educational Disclaimer:</strong>
+        <span>JaivikSetu is a non-commercial educational awareness initiative. We do not sell proprietary inputs or solicit payments.</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 JaivikSetu. All rights reserved. Open-access awareness initiative for Indian Agriculture.</span>
+        <span>Made with 💚 for Indian Farmers</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="download-modal" onclick="if(event.target===this) closeDownloadModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeDownloadModal()">✕</button>
+      <h3 id="modal-guide-title">JaivikSetu Practical Guide</h3>
+      <div id="modal-guide-content"></div>
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button type="button" class="btn btn-outline-dark" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button type="button" class="btn btn-primary" onclick="closeDownloadModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

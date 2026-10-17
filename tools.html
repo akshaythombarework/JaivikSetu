@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Farming Tools – Compost Calculator, Pest Finder & Quiz | JaivikSetu</title>
+  <meta name="description" content="Interactive organic farming tools: Compost Calculator, Pest Finder Diagnostic Matrix, Which Method Suits Me 5-Question Quiz, and Myth vs Fact 3D Flip Cards.">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+
+  <!-- TOP NAVBAR ONLY (NO SIDEBAR) -->
+  <header class="navbar-header inner-nav" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+            <path d="M12 22v-9" stroke-width="2.5"></path>
+            <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+            <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link active" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+          <span class="lang-icon">🌐</span> <span data-i18n="lang_btn">मराठी</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5rem;">
+    <!-- Page Header Banner -->
+    <section class="section-padding section-mehendi" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="tools_page_eyebrow">Digital Agricultural Suite</span>
+          <h1 data-i18n="tools_page_title">Interactive Organic Farming Tools</h1>
+          <p style="font-size: 1.15rem; color: var(--ink);" data-i18n="tools_page_desc">
+            Instant calculators, diagnostic matrices, suitability quizzes, and myth busters engineered to guide your daily farm and garden decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TOOL 1: COMPOST CALCULATOR (PRD §7.1)
+         =================================================================== -->
+    <section class="section-padding section-mehendi-light" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-green" data-i18n="tools_eyebrow">Substrate & Space Optimizer</span>
+          <h2 data-i18n="calc_heading">1. Compost Method & Harvest Calculator</h2>
+          <p data-i18n="calc_desc">Input your daily organic waste volume, waste composition, and available space to receive custom method recommendations and preparation timelines.</p>
+        </div>
+
+        <div class="calculator-wrapper">
+          <!-- Form Inputs -->
+          <form id="compost-calc-form" onsubmit="calculateCompost(event)">
+            <div class="form-group">
+              <label for="calc-waste-amount" class="form-label" data-i18n="calc_lbl_waste">Daily Organic Waste Volume (kg):</label>
+              <input type="number" id="calc-waste-amount" class="form-input" min="0.5" max="500" step="0.5" value="3" required>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-waste-type" class="form-label" data-i18n="calc_lbl_type">Primary Waste Substrate Type:</label>
+              <select id="calc-waste-type" class="form-select">
+                <option value="kitchen_only" data-i18n="calc_opt_waste_1">Kitchen vegetable peels & food scraps only</option>
+                <option value="kitchen_garden" data-i18n="calc_opt_waste_2">Kitchen scraps + garden leaves / lawn trimmings</option>
+                <option value="crop_dung" data-i18n="calc_opt_waste_3">Heavy crop residues (cotton stalks, straw) + cow dung</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-space" class="form-label" data-i18n="calc_lbl_space">Available Outdoor / Farm Space:</label>
+              <select id="calc-space" class="form-select">
+                <option value="balcony" data-i18n="calc_opt_space_1">Balcony, terrace, or compact apartment utility (&lt; 100 sq ft)</option>
+                <option value="backyard" data-i18n="calc_opt_space_2">Backyard, community garden, or small plot (100 – 1,000 sq ft)</option>
+                <option value="farm" data-i18n="calc_opt_space_3">Open field or medium/large farm (&gt; 1 Acre)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-time" class="form-label" data-i18n="calc_lbl_time">Timeline Preference:</label>
+              <select id="calc-time" class="form-select">
+                <option value="fast" data-i18n="calc_opt_time_1">Fast (Need finished compost in 2–3 weeks)</option>
+                <option value="medium" selected data-i18n="calc_opt_time_2">Medium (4–8 weeks is great)</option>
+                <option value="slow" data-i18n="calc_opt_time_3">Slow is fine (3–4 months seasonal curing)</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-secondary" onclick="calculateCompost()" style="width: 100%; justify-content: center;" data-i18n="calc_btn_recalc">
+              🔄 Recalculate Recommendation
+            </button>
+          </form>
+
+          <!-- Result Card (PRD §7.1 Output Specs) -->
+          <div class="calculator-result-box">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--green-600); text-transform: uppercase;" data-i18n="calc_res_method_lbl">RECOMMENDED METHOD</span>
+                <span id="calc-res-diff" style="font-size: 0.8rem; font-weight: 700; color: var(--ink-muted);">Beginner Friendly</span>
+              </div>
+              <h3 id="calc-res-title" style="color: var(--green-900); font-size: 1.4rem; margin-bottom: 0.5rem;">Aerobic Kitchen Waste Compost</h3>
+              
+              <div style="background: var(--cream-pure); padding: 0.75rem 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(107, 74, 42, 0.15);">
+                <span style="font-weight: 700; font-size: 0.9rem; color: var(--ink-muted);" data-i18n="calc_res_est_lbl">Estimated Ready In:</span>
+                <strong id="calc-res-days" style="color: var(--green-900); font-size: 1.25rem;">45 – 60 Days</strong>
+              </div>
+
+              <strong style="color: var(--green-900); display: block; font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="calc_res_steps_lbl">4-Step Summary:</strong>
+              <ul id="calc-res-steps" style="list-style: none; padding: 0; font-size: 0.9rem; color: var(--ink-muted); margin-bottom: 1.5rem;">
+                <!-- Dynamically populated via js/tools.js -->
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="composting.html#kitchen" id="calc-res-link" class="btn btn-secondary" style="font-size: 0.9rem; justify-content: center;" data-i18n="calc_res_full_btn">Read Full Preparation Guide ➔</a>
+              <button type="button" class="btn btn-outline-dark" onclick="openDownloadModal('compost')" style="font-size: 0.85rem; justify-content: center;" data-i18n="calc_res_pdf_btn">📄 Download One-Page Guide (PDF)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TOOL 2: PEST FINDER & MATRIX (PRD §7.2)
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="pest-finder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-terracotta" data-i18n="pest_finder_heading">Diagnostic Matrix</span>
+          <h2 data-i18n="pest_finder_heading">2. Natural Pest Finder & Treatment Selector</h2>
+          <p data-i18n="pest_finder_desc">Identify crop symptoms, examine efficacy indicators across remedies, and follow safety application rules.</p>
+        </div>
+
+        <div class="pest-finder-card">
+          <!-- Pest Selection Pills -->
+          <div class="pest-pills" role="tablist">
+            <button type="button" class="pest-btn active" data-pest="aphids" onclick="selectPest('aphids')" data-i18n="pest_pill_aphids">Aphids (मावा / लाही)</button>
+            <button type="button" class="pest-btn" data-pest="whitefly" onclick="selectPest('whitefly')" data-i18n="pest_pill_whitefly">Whitefly (पांढरी माशी)</button>
+            <button type="button" class="pest-btn" data-pest="caterpillar" onclick="selectPest('caterpillar')" data-i18n="pest_pill_caterpillar">Caterpillars & Borers (अळी)</button>
+            <button type="button" class="pest-btn" data-pest="mites" onclick="selectPest('mites')" data-i18n="pest_pill_mites">Mites (लाल कोळी)</button>
+            <button type="button" class="pest-btn" data-pest="fungal_rot" onclick="selectPest('fungal_rot')" data-i18n="pest_pill_fungal">Fungal Rot & Blight (करपा)</button>
+          </div>
+
+          <!-- Dynamic Remedy Match Matrix Table -->
+          <div style="overflow-x: auto; margin-bottom: 2rem;">
+            <table class="remedy-matrix-table">
+              <thead>
+                <tr>
+                  <th data-i18n="pest_th_target">Target Pest</th>
+                  <th data-i18n="pest_th_neem">Neem Extract (NSKE)</th>
+                  <th data-i18n="pest_th_dasha">Dashaparni Ark</th>
+                  <th data-i18n="pest_th_garlic">Garlic-Chilli Spray</th>
+                  <th data-i18n="pest_th_bio">Biological Agents</th>
+                  <th data-i18n="pest_th_trap">Physical Traps</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="pest-table-name" style="color: var(--green-900);">Active Pest Match</td>
+                  <td id="pest-cell-neem"><span class="dot-effective"></span></td>
+                  <td id="pest-cell-dasha"><span class="dot-effective"></span></td>
+                  <td id="pest-cell-garlic"><span class="dot-effective"></span></td>
+                  <td id="pest-cell-bio"><span class="dot-ineffective"></span></td>
+                  <td id="pest-cell-trap"><span class="dot-effective"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Treatment Details Box -->
+          <div style="background: var(--cream); border-radius: var(--radius-md); padding: 2rem; border-left: 6px solid var(--terracotta);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.75rem;">
+              <h3 id="pest-detail-name" style="color: var(--terracotta-dark); margin: 0; font-size: 1.35rem;">Aphids (मावा / लाही)</h3>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--green-600);" data-i18n="pest_legend">● Highly Effective &nbsp; ○ Supplementary</span>
+            </div>
+            
+            <p id="pest-detail-desc" style="color: var(--ink); margin-bottom: 1.25rem;">
+              Soft-bodied sap-sucking pests clustering under tender shoots and leaves, excreting sticky honeydew.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.25rem;">
+              <div style="background: var(--cream-pure); padding: 1rem; border-radius: var(--radius-sm);">
+                <strong style="color: var(--green-900); display: block; margin-bottom: 0.25rem;" data-i18n="pest_botanical_lbl">Botanical Preparation:</strong>
+                <span id="pest-detail-recipe" style="font-size: 0.95rem; color: var(--ink);">Spray 5% Neem Seed Kernel Extract (NSKE) or Dashaparni Ark (200ml in 10L water). Repeat after 5 days.</span>
+              </div>
+              <div style="background: var(--cream-pure); padding: 1rem; border-radius: var(--radius-sm);">
+                <strong style="color: var(--blue-dark); display: block; margin-bottom: 0.25rem;" data-i18n="pest_trap_lbl">Physical Trap / Cultural:</strong>
+                <span id="pest-detail-trap" style="font-size: 0.95rem; color: var(--ink);">Yellow Sticky Traps (10 per acre) at crop canopy level.</span>
+              </div>
+            </div>
+
+            <!-- Mandatory Safety Caution Note (PRD §7.2) -->
+            <div style="background: var(--terracotta-light); color: var(--terracotta-dark); padding: 0.85rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 600;">
+              ⚠️ <strong data-i18n="pest_safety_lbl">Mandatory Safety Caution:</strong> <span id="pest-detail-caution">Spray in the late evening to avoid leaf scorch and protect honeybees and pollinators.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TOOL 3: "WHICH METHOD SUITS ME?" 5-QUESTION QUIZ (PRD §7.3)
+         =================================================================== -->
+    <section class="section-padding section-mehendi-light" id="quiz">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="tool_quiz_title">Personalized Recommendation</span>
+          <h2 data-i18n="quiz_heading">3. "Which Method Suits Me?" 5-Question Quiz</h2>
+          <p data-i18n="quiz_desc">Answer 5 quick questions on space, waste, effort, and timeframe to find your best-fit organic system and a runner-up alternative.</p>
+        </div>
+
+        <div style="max-width: 760px; margin: 0 auto; background: var(--cream-pure); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-md); border: 1px solid rgba(107, 74, 42, 0.15);">
+          <div id="quiz-step-container">
+            <!-- Rendered dynamically by js/tools.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TOOL 4: MYTH VS FACT 3D FLIP CARDS (PRD §7.4 - 8 CARDS)
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="myths">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow eyebrow-terracotta" data-i18n="tool_myth_title">Evidence-Based Truths</span>
+          <h2 data-i18n="myths_heading">4. Myth vs. Fact Flip Cards</h2>
+          <p data-i18n="myths_desc">Click or tap any card below to flip it and reveal the scientific agricultural reality behind common organic misconceptions.</p>
+        </div>
+
+        <div class="myth-cards-grid">
+          
+          <!-- CARD 1 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 1">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #1</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_1_title">"Organic farming means permanently lower yields forever."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_1_desc">
+                    Yield may dip 10–20% during the initial 2–3 transition years while chemically burned soil recovers its microbiome. Thereafter, high organic carbon achieves yield parity with dramatically lower input costs.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 2">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #2</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_2_title">"'Natural' and 'Organic' food mean the exact same thing."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_2_desc">
+                    "Natural" is an unregulated marketing word. "Organic" is a strictly audited legal certification under FSSAI, PGS-India, and NPOP ensuring zero synthetic chemicals or GMOs.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 3">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #3</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_3_title">"Organic farming requires expensive packaged inputs."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_3_desc">
+                    Over 85% of organic inputs (Jeevamrut, Dashaparni, vermicompost, cow dung slurry) are prepared directly on the farm using local crop residues and native cattle, saving thousands in dealer debt.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 4">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #4</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_4_title">"Composting always generates foul, sickening smells."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_4_desc">
+                    A well-managed aerobic compost pile with a 2:1 brown-to-green ratio smells sweet and earthy like monsoon rain on forest soil. Foul smells only happen when excess moisture causes oxygen starvation.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 5">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #5</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_5_title">"Organic sprays are 100% harmless and can be sprayed anytime."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_5_desc">
+                    Botanical extracts like Dashaparni and garlic-chilli are powerful. If sprayed in bright midday sun, they can scorch foliage and harm visiting honeybees. Always spray after 4:30 PM.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 6">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #6</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_6_title">"Organic farming cannot produce enough food to feed India."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_6_desc">
+                    By combining legume crop rotations, multi-cropping, water-saving mulches, and indigenous seeds, organic agroecology boosts cumulative annual farm calorie yield while preserving groundwater.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 7 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 7">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #7</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_7_title">"Earthworms can digest all kitchen and animal waste."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_7_desc">
+                    Earthworms (Eisenia fetida) lack lungs and breathe through skin. Citrus lemon rinds, hot chili, onions, and raw meat create fatal acidity and heat. Organic waste must be pre-decomposed first.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 8 -->
+          <div class="flip-card" tabindex="0" role="button" aria-label="Flip card for Myth 8">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div>
+                  <span class="flip-badge flip-badge-myth" data-i18n="flip_badge_myth">COMMON MYTH #8</span>
+                  <h3 style="font-size: 1.15rem; color: var(--terracotta-dark); margin-top: 0.75rem;" data-i18n="myth_8_title">"Organic certification is only for wealthy corporate farms."</h3>
+                </div>
+                <span class="flip-instruction" data-i18n="flip_hint_reveal">🔄 Click to reveal the truth</span>
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <span class="flip-badge flip-badge-fact" data-i18n="flip_badge_fact">SCIENTIFIC FACT</span>
+                  <p style="font-size: 0.95rem; color: var(--green-900); margin-top: 0.75rem;" data-i18n="fact_8_desc">
+                    The Government of India's PGS-India programme was created specifically for smallholder and marginal farmers with zero third-party audit fees based on village peer verification.
+                  </p>
+                </div>
+                <span class="flip-instruction" style="color: var(--green-700);" data-i18n="flip_hint_back">🔄 Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-hill-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0,32 C360,0 720,48 1080,16 C1260,0 1380,24 1440,32 L1440,48 L0,48 Z"></path></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+                <path d="M12 22v-9" stroke-width="2.5"></path>
+                <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+                <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+              </svg>
+            </div>
+            <div class="brand-name"><span style="color: #ffffff;">Jaivik</span><span style="color: #FFE58F;">Setu</span></div>
+          </div>
+          <p data-i18n="footer_tagline">Bridging Indian farmers, students, and home gardeners to sustainable organic agriculture.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="learn.html" data-i18n="nav_learn">Learn</a></li>
+            <li><a href="composting.html" data-i18n="nav_compost">Composting</a></li>
+            <li><a href="pesticides.html" data-i18n="nav_pesticides">Pesticides</a></li>
+            <li><a href="schemes.html" data-i18n="nav_schemes">Schemes</a></li>
+            <li><a href="tools.html" data-i18n="nav_tools">Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="tools_title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="#calculator" data-i18n="tool_calc_title">Compost Calculator</a></li>
+            <li><a href="#pest-finder" data-i18n="tool_pest_title">Pest Finder Diagnostic</a></li>
+            <li><a href="#quiz" data-i18n="tool_quiz_title">Suitability Quiz</a></li>
+            <li><a href="#myths" data-i18n="tool_myth_title">Myth vs Fact Cards</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_downloads_title">Printable Guides</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')" data-i18n="pdf_compost">📄 Compost Cheat-Sheet</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('pesticide')" data-i18n="pdf_pesticide">📄 Pesticide Recipes Card</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('schemes')" data-i18n="pdf_schemes">📄 Scheme Summary</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer-box">
+        <strong style="color: #FFE9A8; display: block; margin-bottom: 0.25rem;" data-i18n="footer_disclaimer_title">Educational Disclaimer:</strong>
+        <span data-i18n="footer_disclaimer">Tool results provide indicative guidelines based on standard research models. Verify field applications with your regional KVK officer.</span>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 JaivikSetu. All rights reserved. Open-access awareness initiative for Indian Agriculture.</span>
+        <span data-i18n="footer_made_with">Made with 💚 for Indian Farmers</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="download-modal" onclick="if(event.target===this) closeDownloadModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeDownloadModal()">✕</button>
+      <h3 id="modal-guide-title">JaivikSetu Practical Guide</h3>
+      <div id="modal-guide-content"></div>
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button type="button" class="btn btn-outline-dark" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button type="button" class="btn btn-primary" onclick="closeDownloadModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
