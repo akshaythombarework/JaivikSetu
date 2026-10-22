@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Activities & Field Experiences | JaivikSetu</title>
+  <meta name="description" content="Discover the 8 key project activities of JaivikSetu: research, field visits to Hanumanwadi and Vidhate Natural Farm, Lalgun farmer survey, Marathi article, and interactive image gallery.">
+  <link rel="canonical" href="https://jaiviksetu.vercel.app/activities.html">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Activities & Field Experiences | JaivikSetu">
+  <meta property="og:description" content="A comprehensive journey through research, field visits, farmer interviews, village surveys, and open-access digital guidance for sustainable organic agriculture.">
+  <meta property="og:image" content="https://jaiviksetu.vercel.app/assets/images/activities/field-visit-hanumanwadi/display/02-field-visit-1.jpg">
+  <meta property="og:url" content="https://jaiviksetu.vercel.app/activities.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Activities & Field Experiences | JaivikSetu">
+  <meta name="twitter:description" content="8 project activities documenting the practical challenges and opportunities of organic farming adoption in India.">
+  <meta name="twitter:image" content="https://jaiviksetu.vercel.app/assets/images/activities/field-visit-hanumanwadi/display/02-field-visit-1.jpg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/activities.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+
+  <!-- ===================================================================
+       TOP NAVBAR ONLY (NO SIDEBAR ON ANY PAGE OR BREAKPOINT)
+       =================================================================== -->
+  <header class="navbar-header inner-nav" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="JaivikSetu Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+            <path d="M12 22v-9" stroke-width="2.5"></path>
+            <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+            <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-jaivik">Jaivik</span><span class="brand-setu">Setu</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="learn.html" class="nav-link" data-i18n="nav_learn">Learn</a></li>
+          <li><a href="composting.html" class="nav-link" data-i18n="nav_compost">Composting</a></li>
+          <li><a href="pesticides.html" class="nav-link" data-i18n="nav_pesticides">Pesticides</a></li>
+          <li><a href="schemes.html" class="nav-link" data-i18n="nav_schemes">Schemes</a></li>
+          <li><a href="tools.html" class="nav-link" data-i18n="nav_tools">Tools</a></li>
+          <li><a href="campaign.html" class="nav-link" data-i18n="nav_campaign">Campaign</a></li>
+          <li><a href="activities.html" class="nav-link active" data-i18n="nav_activities">Activities</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+          <span class="lang-icon">🌐</span> <span data-i18n="lang_btn">मराठी</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5rem;">
+    <!-- ===================================================================
+         1. COMPACT PAGE HERO (~40vh)
+         Mehendi/green gradient banner, hill divider, floating leaf particles
+         =================================================================== -->
+    <section class="section-mehendi" style="padding: 3.5rem 0 2.5rem; position: relative; overflow: hidden; background: linear-gradient(180deg, var(--mehendi-light) 0%, var(--mehendi) 100%);">
+      <canvas id="hero-particles" style="position: absolute; inset: 0; pointer-events: none; opacity: 0.65;" aria-hidden="true"></canvas>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+          <!-- Breadcrumb -->
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+            <p style="font-size: 0.88rem; font-weight: 600; color: var(--ink-subtle); margin: 0;">
+              <a href="index.html" style="color: var(--green-700);" data-i18n="act_breadcrumb_home">Home</a>
+              <span style="margin: 0 0.5rem; opacity: 0.6;">&gt;</span>
+              <span style="color: var(--green-900);" data-i18n="act_breadcrumb_act">Activities</span>
+            </p>
+          </nav>
+
+          <span class="section-eyebrow eyebrow-green" data-i18n="act_hero_eyebrow">Ground Engagement &amp; Research</span>
+          <h1 data-i18n="act_hero_title" style="margin-bottom: 1.25rem; font-size: clamp(2rem, 4vw, 3rem);">Our Activities &amp; Field Experiences</h1>
+
+          <p style="font-size: 1.12rem; color: var(--ink); line-height: 1.7; margin-bottom: 1rem;" data-i18n-html="act_hero_sub">
+            Our project focused on understanding <strong>awareness and adoption of organic farming practices among farmers</strong>. We combined research, field visits, farmer interaction, surveys and awareness activities to understand the practical challenges associated with organic farming.
+          </p>
+
+          <p style="font-size: 1.02rem; color: var(--ink-muted); line-height: 1.65; margin-bottom: 1.5rem;" data-i18n="act_hero_sub2">
+            Each activity helped us explore a different aspect of the topic, from observing existing farming practices to preparing a digital resource that makes organic farming information easier to access.
+          </p>
+
+          <!-- Subnav Anchor Pills -->
+          <div class="subnav-pills-bar">
+            <a href="#journey" class="subnav-pill" data-i18n="act_subnav_journey">🌱 Our Journey</a>
+            <a href="#gallery" class="subnav-pill" data-i18n="act_subnav_gallery">🖼️ Image Gallery</a>
+            <a href="#learning" class="subnav-pill" data-i18n="act_subnav_learning">💡 Project Learning</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hill Line Silhouette Divider -->
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; line-height: 0; pointer-events: none;" aria-hidden="true">
+        <svg viewBox="0 0 1440 36" preserveAspectRatio="none" style="width: 100%; height: 36px; fill: var(--mehendi-light);">
+          <path d="M0,24 C320,0 720,36 1080,12 C1260,0 1380,18 1440,24 L1440,36 L0,36 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         2. STATS RIBBON (COUNT-UP COMPUTED FROM DATA)
+         =================================================================== -->
+    <section class="stats-ribbon" style="background: var(--mehendi-light); padding: 2.25rem 0; border-bottom: 1px solid rgba(107, 74, 42, 0.12);">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number" data-count="8" data-i18n="act_stat_1_num">8</span>
+            <span class="stat-label" data-i18n="act_stat_1_lbl">Activities Completed</span>
+            <small style="color: var(--ink-subtle); font-size: 0.8rem; display: block; margin-top: 0.25rem;" data-i18n="act_stat_1_sub">Comprehensive Project Work</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="3" data-i18n="act_stat_2_num">3</span>
+            <span class="stat-label" data-i18n="act_stat_2_lbl">Field Locations Explored</span>
+            <small style="color: var(--ink-subtle); font-size: 0.8rem; display: block; margin-top: 0.25rem;" data-i18n="act_stat_2_sub">Hanumanwadi · Vidhate Farm · Lalgun</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="1" data-i18n="act_stat_3_num">1</span>
+            <span class="stat-label" data-i18n="act_stat_3_lbl">Open-Access Digital Platform</span>
+            <small style="color: var(--ink-subtle); font-size: 0.8rem; display: block; margin-top: 0.25rem;" data-i18n="act_stat_3_sub">JaivikSetu</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="1" data-i18n="act_stat_4_num">1</span>
+            <span class="stat-label" data-i18n="act_stat_4_lbl">Marathi Article Authored</span>
+            <small style="color: var(--ink-subtle); font-size: 0.8rem; display: block; margin-top: 0.25rem;" data-i18n="act_stat_4_sub">Bridging Research &amp; Practice</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         3. "OUR JOURNEY" VERTICAL TIMELINE (#journey)
+         8 Structured Milestones with scroll-progress line & numbered markers
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="journey">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 3.5rem;">
+          <span class="section-eyebrow eyebrow-saffron" data-i18n="act_journey_eyebrow">Chronological Progression</span>
+          <h2 data-i18n="act_journey_title">Our Journey</h2>
+          <p data-i18n="act_journey_sub">Exploring organic agriculture across 8 structured milestones from research to community action.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Guide lines -->
+          <div class="timeline-track" aria-hidden="true"></div>
+          <div class="timeline-progress-line" aria-hidden="true"></div>
+
+          <!-- ACTIVITY 1: Research & Organic Farming Awareness -->
+          <div class="timeline-item timeline-item-left" id="activity-1">
+            <div class="timeline-marker" aria-label="Activity 1">1</div>
+            <article class="activity-card accent-green">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">🌱</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-green">ACTIVITY 1</span>
+                  <h3 class="activity-title" data-i18n="act_1_title">1. Research &amp; Organic Farming Awareness</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_1_sub">Understanding Organic Farming Beyond Theory</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>We began by studying organic farming methods, their potential benefits and their role in sustainable agriculture. Our research covered natural manure, composting, crop residue reuse, mulching, crop rotation and natural pest management.</p>
+                <p>We also explored why farmers may find it difficult to adopt certain practices, even when they understand their benefits. This helped us connect the theoretical aspects of organic farming with the questions we wanted to investigate during our field activities.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>📋</span> <strong>What We Did</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Studied different organic farming methods and their applications.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Explored the importance of soil health, biodiversity and natural resource management.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Prepared awareness material and shared information about organic farming with farmers.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Identified the importance of practical guidance alongside general awareness.</span></li>
+                </ul>
+              </div>
+
+              <!-- Key Learning Callout Quote -->
+              <div class="activity-key-learning">
+                <span class="key-learning-label" data-i18n="key_learning_heading">💡 Key Learning</span>
+                <p class="key-learning-text">"Understanding a farming practice is only the first step. Knowing how to apply it under actual farming conditions is equally important."</p>
+              </div>
+
+              <!-- Illustrated Graphic Thumbnail (with badge) -->
+              <div class="activity-thumb-row" style="grid-template-columns: 1fr;">
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-01')" tabindex="0" role="button" aria-label="Open illustration in full viewer" style="max-height: 220px;">
+                  <span class="activity-thumb-badge badge-illustration" data-i18n="badge_illustration">Illustration</span>
+                  <picture>
+                    <source srcset="assets/images/activities/research-awareness/thumb/01-research-illustration-1.webp" type="image/webp">
+                    <img src="assets/images/activities/research-awareness/thumb/01-research-illustration-1.png" alt="Illustration diagram showing core research topics in organic farming" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=research-awareness" class="activity-view-gallery-link" data-i18n="view_all_photos">View in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 2: Field Visit – Hanumanwadi, Alandi Devachi, Pune -->
+          <div class="timeline-item timeline-item-right" id="activity-2">
+            <div class="timeline-marker" aria-label="Activity 2">2</div>
+            <article class="activity-card accent-saffron">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">🚜</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-saffron">ACTIVITY 2</span>
+                  <h3 class="activity-title" data-i18n="act_2_title">2. Field Visit – Hanumanwadi, Alandi Devachi, Pune</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_2_sub">Understanding Farming Practices at the Ground Level</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>Our field visit to Hanumanwadi, Alandi Devachi, gave us an opportunity to interact with local farmers and understand their day-to-day farming practices. We spoke with farmers about their crops, use of organic materials, pest management and the challenges they face while managing their farms.</p>
+                <p>The visit helped us understand that farming practices depend on several factors, including available resources, water conditions, crop requirements and cost. We observed that traditional methods and modern agricultural inputs can be used together on the same farm.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>🌾</span> <strong>What We Observed</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Soybean and ghevda were among the crops grown in the area, while jowar was cultivated during summer.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Some farmers used taag as green manure and animal waste for preparing farm manure.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Crop residues were reused, while chemical pesticides were also used for pest control.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Some farmers used natural materials such as neem and cow urine.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Rainfall and available water resources influenced farming conditions.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-callout">
+                <div class="activity-callout-title" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>The discussions helped us understand that farmers make practical decisions based on their circumstances. They may be aware of natural farming methods but still have questions about their preparation, use and suitability.</p>
+                <p>We realised that encouraging organic farming requires more than explaining its benefits. Farmers also need understandable information about how different methods work and how they can be used appropriately.</p>
+              </div>
+
+              <!-- Thumbnail row (max 3 photos, real photos have no badge) -->
+              <div class="activity-thumb-row">
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-02')" tabindex="0" role="button" aria-label="Field visit interaction with local farmer">
+                  <picture>
+                    <source srcset="assets/images/activities/field-visit-hanumanwadi/thumb/02-field-visit-1.webp" type="image/webp">
+                    <img src="assets/images/activities/field-visit-hanumanwadi/thumb/02-field-visit-1.jpg" alt="Team interaction with local farmer in soybean field at Hanumanwadi" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-03')" tabindex="0" role="button" aria-label="Observing crop health and discussing natural farming methods">
+                  <picture>
+                    <source srcset="assets/images/activities/field-visit-hanumanwadi/thumb/02-field-visit-2.webp" type="image/webp">
+                    <img src="assets/images/activities/field-visit-hanumanwadi/thumb/02-field-visit-2.jpg" alt="Observing crop health and discussing natural farming methods" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-04')" tabindex="0" role="button" aria-label="Local farmers at Hanumanwadi field site">
+                  <picture>
+                    <source srcset="assets/images/activities/field-visit-hanumanwadi/thumb/02-field-visit-3.webp" type="image/webp">
+                    <img src="assets/images/activities/field-visit-hanumanwadi/thumb/02-field-visit-3.jpg" alt="Local farmers at the Hanumanwadi agricultural field site" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=field-visit-hanumanwadi" class="activity-view-gallery-link">View all 4 photos in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 3: Farmer Interview – Vidhate Natural Farm, Manjari Budruk -->
+          <div class="timeline-item timeline-item-left" id="activity-3">
+            <div class="timeline-marker" aria-label="Activity 3">3</div>
+            <article class="activity-card accent-saffron">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">🌿</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-saffron">ACTIVITY 3</span>
+                  <h3 class="activity-title" data-i18n="act_3_title">3. Farmer Interview – Vidhate Natural Farm, Manjari Budruk</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_3_sub">Learning from Natural Farming and Biodiversity</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>Our visit to Vidhate Natural Farm provided an opportunity to learn from a practitioner involved in natural farming. The interview helped us understand the importance of traditional plant varieties, natural resource reuse and biodiversity in agricultural practices.</p>
+                <p>The farm included different varieties of vegetables, fruits, flowers and medicinal plants, including some traditional and rare plants that were unfamiliar to us. We also learned about methods used to manage organic materials and maintain a diverse farm environment.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>🍃</span> <strong>What We Learned</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>The importance of conserving indigenous and rare plant varieties.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>How fallen leaves and pruned branches can be decomposed and reused as organic material.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>The role of beneficial insects and flowering plants in the farm ecosystem.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>The importance of preserving traditional agricultural knowledge.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>The challenges of conserving farmland and rare plants amid urban expansion.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-callout">
+                <div class="activity-callout-title" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>One of the most interesting aspects of the visit was understanding how materials that might otherwise be discarded can be put to use in farming. We also learned that natural farming involves more than selecting a particular fertiliser or pest-control method; it requires attention to the wider farm ecosystem.</p>
+                <p>The visit gave us a practical perspective on biodiversity conservation and showed how individual farming practices can contribute to the responsible use of natural resources.</p>
+              </div>
+
+              <!-- Thumbnail row (3 real photos) -->
+              <div class="activity-thumb-row">
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-06')" tabindex="0" role="button" aria-label="Discussion on organic input preparation drums">
+                  <picture>
+                    <source srcset="assets/images/activities/farmer-interview-vidhate/thumb/03-vidhate-farm-1.webp" type="image/webp">
+                    <img src="assets/images/activities/farmer-interview-vidhate/thumb/03-vidhate-farm-1.jpg" alt="Discussion on organic input preparation drums at Vidhate Natural Farm" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-07')" tabindex="0" role="button" aria-label="Traditional vegetable cultivation and bottle gourd vine">
+                  <picture>
+                    <source srcset="assets/images/activities/farmer-interview-vidhate/thumb/03-vidhate-farm-2.webp" type="image/webp">
+                    <img src="assets/images/activities/farmer-interview-vidhate/thumb/03-vidhate-farm-2.jpg" alt="Traditional vegetable cultivation and bottle gourd vine at the farm" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-08')" tabindex="0" role="button" aria-label="Entrance of Vidhate Natural Farm">
+                  <picture>
+                    <source srcset="assets/images/activities/farmer-interview-vidhate/thumb/03-vidhate-farm-3.webp" type="image/webp">
+                    <img src="assets/images/activities/farmer-interview-vidhate/thumb/03-vidhate-farm-3.jpg" alt="Entrance and farm-fresh organic produce center at Vidhate Natural Farm" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=farmer-interview-vidhate" class="activity-view-gallery-link" data-i18n="view_all_photos">View in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 4: Farmer Awareness & Survey – Lalgun Village -->
+          <div class="timeline-item timeline-item-right" id="activity-4">
+            <div class="timeline-marker" aria-label="Activity 4">4</div>
+            <article class="activity-card accent-terracotta">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">📋</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-terracotta">ACTIVITY 4</span>
+                  <h3 class="activity-title" data-i18n="act_4_title">4. Farmer Awareness &amp; Survey – Lalgun Village</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_4_sub">Understanding Awareness, Adoption and Farmers' Needs</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>To explore our main subtopic more closely, we prepared a questionnaire for farmers in Lalgun village. The survey focused on awareness of organic farming, current farming practices, practical knowledge, willingness to adopt more organic methods and the difficulties farmers associate with adoption.</p>
+                <p>The questions were kept simple, using Yes/No responses, one-word answers and short responses. This made it easier to organise the information and compare responses across the questionnaire.</p>
+                <p>Alongside the survey activity, we also shared information about organic farming with farmers as part of our awareness efforts.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>📊</span> <strong>What We Did</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Prepared a questionnaire focused on awareness and adoption of organic farming.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Included questions about organic manure, crop residue reuse and natural pest management.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Examined the use of chemical pesticides and previous experience with organic methods.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Asked about practical knowledge, information gaps and adoption barriers.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Organised the recorded responses and prepared charts to compare different aspects of the survey.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-bullet-group" style="background: rgba(251, 236, 231, 0.5);">
+                <div class="activity-bullet-heading" style="color: var(--terracotta-dark);">
+                  <span>🔍</span> <strong>What the Survey Explored</strong>
+                </div>
+                <p style="font-size: 0.92rem; color: var(--ink); line-height: 1.6; margin: 0;">
+                  The survey considered four main areas: awareness of organic farming, current adoption of practices, practical knowledge and difficulties associated with adoption. These areas helped us organise the collected responses and examine the relationship between knowing about organic farming and using its practices.
+                </p>
+              </div>
+
+              <div class="activity-callout" style="border-left-color: var(--terracotta);">
+                <div class="activity-callout-title" style="color: var(--terracotta-dark);" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>The activity helped us understand the importance of collecting information directly from the community and organising it systematically. It also showed why awareness, actual use, practical knowledge and willingness should be considered separately when studying organic farming adoption.</p>
+              </div>
+
+              <!-- Survey Charts Strip (Uncropped, contain on cream) -->
+              <div style="margin-top: 1.25rem;">
+                <strong style="font-size: 0.88rem; color: var(--terracotta-dark); display: block; margin-bottom: 0.6rem;" data-i18n="survey_charts_heading">Survey Charts (Lalgun Village)</strong>
+                <div class="activity-thumb-row" style="grid-template-columns: repeat(4, 1fr);">
+                  <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-09')" tabindex="0" role="button" aria-label="Survey Chart 1: Awareness">
+                    <span class="activity-thumb-badge badge-chart" data-i18n="badge_chart">Chart</span>
+                    <picture>
+                      <source srcset="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-1.webp" type="image/webp">
+                      <img src="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-1.png" alt="Bar chart: Awareness of organic farming among surveyed farmers" loading="lazy" decoding="async">
+                    </picture>
+                  </div>
+                  <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-10')" tabindex="0" role="button" aria-label="Survey Chart 2: Adoption and Knowledge">
+                    <span class="activity-thumb-badge badge-chart" data-i18n="badge_chart">Chart</span>
+                    <picture>
+                      <source srcset="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-2.webp" type="image/webp">
+                      <img src="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-2.png" alt="Bar chart: Adoption rates, past trials and knowledge" loading="lazy" decoding="async">
+                    </picture>
+                  </div>
+                  <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-11')" tabindex="0" role="button" aria-label="Survey Chart 4: Major Barriers">
+                    <span class="activity-thumb-badge badge-chart" data-i18n="badge_chart">Chart</span>
+                    <picture>
+                      <source srcset="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-4.webp" type="image/webp">
+                      <img src="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-4.png" alt="Bar chart: Major barriers to adoption of organic farming" loading="lazy" decoding="async">
+                    </picture>
+                  </div>
+                  <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-12')" tabindex="0" role="button" aria-label="Survey Chart 5: Willingness">
+                    <span class="activity-thumb-badge badge-chart" data-i18n="badge_chart">Chart</span>
+                    <picture>
+                      <source srcset="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-5.webp" type="image/webp">
+                      <img src="assets/images/activities/farmer-survey-lalgun/thumb/04-survey-chart-5.png" alt="Bar chart: Awareness and willingness towards organic farming" loading="lazy" decoding="async">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=farmer-survey-lalgun" class="activity-view-gallery-link">View all charts in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 5: Digital Initiative – JaivikSetu -->
+          <div class="timeline-item timeline-item-left" id="activity-5">
+            <div class="timeline-marker" aria-label="Activity 5">5</div>
+            <article class="activity-card accent-blue">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">💻</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-blue">ACTIVITY 5</span>
+                  <h3 class="activity-title" data-i18n="act_5_title">5. Digital Initiative – JaivikSetu</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_5_sub">Connecting Organic Farming Information with Practical Guidance</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p><strong>JaivikSetu</strong> is our digital initiative developed to make organic farming information easier to access and understand. The website brings together explanations of farming methods, preparation guides, natural pest-control information, sustainable field practices and details about government schemes and certification.</p>
+                <p>The idea came from our overall project focus: awareness becomes more useful when people can also find practical information about the methods they want to understand.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>⚡</span> <strong>Key Features</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Organic Farming Learning:</strong> Introduces the principles of organic agriculture, soil health and biodiversity.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Composting Guides:</strong> Covers heap or pit composting, NADEP, vermicomposting, kitchen waste composting, Bokashi, green manuring and biochar.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Natural Pest Management:</strong> Provides information about neem-based preparations, Dashaparni Ark, garlic-chilli preparations, biological pest-control options and traps.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Field Practices:</strong> Explains mulching, crop rotation, mixed cropping, intercropping and drip irrigation.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Interactive Tools:</strong> Includes a compost calculator, natural pest finder, practice-selection quiz and Myth vs Fact cards.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Schemes &amp; Certification:</strong> Introduces relevant government schemes and organic certification systems.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span><strong>Regional-Language Access:</strong> Provides content in English and Marathi, along with printable guides.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-callout" style="border-left-color: var(--blue);">
+                <div class="activity-callout-title" style="color: var(--blue);" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>Developing JaivikSetu helped us bring information from different parts of organic farming into one organised platform. We focused on presenting preparation processes and practical guidance alongside basic explanations so users could explore a topic in greater detail.</p>
+                <p>The website is intended as an educational resource. Users should still refer to suitable agricultural guidance for crop-specific recommendations, particularly when preparing and applying pest-control solutions.</p>
+              </div>
+
+              <!-- Website Screenshots Strip -->
+              <div class="activity-thumb-row" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-13')" tabindex="0" role="button" aria-label="JaivikSetu Homepage Screenshot">
+                  <span class="activity-thumb-badge badge-screenshot" data-i18n="badge_screenshot">Screenshot</span>
+                  <picture>
+                    <source srcset="assets/images/activities/digital-initiative-jaiviksetu/thumb/05-jaiviksetu-home.webp" type="image/webp">
+                    <img src="assets/images/activities/digital-initiative-jaiviksetu/thumb/05-jaiviksetu-home.png" alt="JaivikSetu homepage desktop screenshot" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-14')" tabindex="0" role="button" aria-label="JaivikSetu Composting Section Screenshot">
+                  <span class="activity-thumb-badge badge-screenshot" data-i18n="badge_screenshot">Screenshot</span>
+                  <picture>
+                    <source srcset="assets/images/activities/digital-initiative-jaiviksetu/thumb/05-jaiviksetu-composting.webp" type="image/webp">
+                    <img src="assets/images/activities/digital-initiative-jaiviksetu/thumb/05-jaiviksetu-composting.png" alt="Composting guide screenshot" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-15')" tabindex="0" role="button" aria-label="JaivikSetu Marathi UI Screenshot">
+                  <span class="activity-thumb-badge badge-screenshot" data-i18n="badge_screenshot">Screenshot</span>
+                  <picture>
+                    <source srcset="assets/images/activities/digital-initiative-jaiviksetu/thumb/05-jaiviksetu-marathi.webp" type="image/webp">
+                    <img src="assets/images/activities/digital-initiative-jaiviksetu/thumb/05-jaiviksetu-marathi.png" alt="Marathi language interface screenshot" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Action Links row with buttons -->
+              <div class="activity-links-row">
+                <div class="activity-action-btns">
+                  <a href="https://jaiviksetu.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.45rem 1.15rem; font-size: 0.88rem;" data-i18n="btn_explore_website">Explore the Website ↗</a>
+                  <a href="https://github.com/akshaythombarework/JaivikSetu" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark" style="padding: 0.45rem 1.15rem; font-size: 0.88rem;" data-i18n="btn_source_code">Source Code ↗</a>
+                </div>
+                <a href="#gallery?filter=digital-initiative-jaiviksetu" class="activity-view-gallery-link" data-i18n="view_all_photos">View in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 6: Article Writing – Sharing Our Findings -->
+          <div class="timeline-item timeline-item-right" id="activity-6">
+            <div class="timeline-marker" aria-label="Activity 6">6</div>
+            <article class="activity-card accent-brown">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">📰</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-brown">ACTIVITY 6</span>
+                  <h3 class="activity-title" data-i18n="act_6_title">6. Article Writing – Sharing Our Findings</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_6_sub">Communicating the Importance of Organic Farming Awareness</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>As part of our project, we prepared a Marathi article titled <strong>“सेंद्रिय शेतीचा स्वीकार वाढवण्यासाठी जागरूकतेसोबत व्यवहार्य मार्गदर्शनही गरजेचे”</strong> (Practical Guidance Alongside Awareness Is Essential to Increase the Adoption of Organic Farming).</p>
+                <p>The article brought together our research, field observations, farmer interaction and understanding of the challenges associated with adopting organic farming practices.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>✍️</span> <strong>What We Did</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Organised information gathered during the different project activities.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Included observations from the field visit and interview.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Discussed the relationship between awareness, practical knowledge and adoption.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Prepared the article in Marathi for submission to a newspaper.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-callout" style="border-left-color: var(--brown);">
+                <div class="activity-callout-title" style="color: var(--brown);" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>Article writing helped us present the project in a form that could be understood by a wider audience. It also encouraged us to connect our field experiences with the broader need for practical agricultural awareness.</p>
+                <p>The article reflects the central idea of our project: sharing information is important, but explaining how organic practices can be applied is equally necessary.</p>
+              </div>
+
+              <!-- Article Graphic Thumbnail (with Illustration badge) -->
+              <div class="activity-thumb-row" style="grid-template-columns: 1fr;">
+                <div class="activity-thumb-item" onclick="openActivityLightboxByImageId('img-16')" tabindex="0" role="button" aria-label="Marathi Article Title Card" style="max-height: 220px;">
+                  <span class="activity-thumb-badge badge-illustration" data-i18n="badge_illustration">Illustration</span>
+                  <picture>
+                    <source srcset="assets/images/activities/article-writing/thumb/06-article-title-card.webp" type="image/webp">
+                    <img src="assets/images/activities/article-writing/thumb/06-article-title-card.png" alt="Title card for the Marathi article on organic farming awareness" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=article-writing" class="activity-view-gallery-link" data-i18n="view_all_photos">View in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 7: Awareness Poster – Communicating Through Visuals -->
+          <div class="timeline-item timeline-item-left" id="activity-7">
+            <div class="timeline-marker" aria-label="Activity 7">7</div>
+            <article class="activity-card accent-brown">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">🖼️</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-brown">ACTIVITY 7</span>
+                  <h3 class="activity-title" data-i18n="act_7_title">7. Awareness Poster – Communicating Through Visuals</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_7_sub">Presenting Organic Farming in a Simple and Engaging Format</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>We prepared an organic farming poster to communicate important concepts, methods, benefits and challenges in a visual format. The poster brings together information about organic farming, composting, natural crop protection and the activities completed during our project.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>🎨</span> <strong>What We Included</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>An introduction to organic farming and its main principles.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Different composting methods and natural crop-protection options.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Potential benefits and practical challenges associated with organic farming.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Highlights of our research, field visit, interview, survey and JaivikSetu website.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-callout" style="border-left-color: var(--brown);">
+                <div class="activity-callout-title" style="color: var(--brown);" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>Preparing the poster helped us identify the most relevant information and present it in a format that could be understood quickly. It also gave us a way to combine our research and project activities into a single visual presentation.</p>
+              </div>
+
+              <!-- Poster Thumbnail (with Document badge, contain uncropped) -->
+              <div class="activity-thumb-row" style="grid-template-columns: 1fr;">
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-17')" tabindex="0" role="button" aria-label="Organic Farming Awareness Poster" style="max-height: 250px;">
+                  <span class="activity-thumb-badge badge-document" data-i18n="badge_document">Document</span>
+                  <picture>
+                    <source srcset="assets/images/activities/awareness-poster/thumb/07-poster-1.webp" type="image/webp">
+                    <img src="assets/images/activities/awareness-poster/thumb/07-poster-1.jpg" alt="Comprehensive organic farming awareness poster prepared for display" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=awareness-poster" class="activity-view-gallery-link" data-i18n="view_all_photos">View in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ACTIVITY 8: Newspaper Clipping Analysis -->
+          <div class="timeline-item timeline-item-right" id="activity-8">
+            <div class="timeline-marker" aria-label="Activity 8">8</div>
+            <article class="activity-card accent-brown">
+              <div class="activity-header">
+                <div class="activity-icon-badge" aria-hidden="true">🗞️</div>
+                <div class="activity-meta">
+                  <span class="activity-step-label accent-brown">ACTIVITY 8</span>
+                  <h3 class="activity-title" data-i18n="act_8_title">8. Newspaper Clipping Analysis</h3>
+                  <h4 class="activity-subtitle" data-i18n="act_8_sub">Learning from Agricultural News and Public Information</h4>
+                </div>
+              </div>
+
+              <div class="activity-intro">
+                <p>We collected and analysed newspaper clippings related to organic farming and agricultural practices. The activity helped us examine how organic farming, farmers' experiences and agricultural challenges are discussed in news reports.</p>
+              </div>
+
+              <div class="activity-bullet-group">
+                <div class="activity-bullet-heading">
+                  <span>📰</span> <strong>What We Did</strong>
+                </div>
+                <ul class="activity-bullet-list">
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Collected relevant newspaper articles and clippings.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Examined headlines, newspaper details and the main subject of each report.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Summarised the central issues discussed in the selected articles.</span></li>
+                  <li class="activity-bullet-item"><span class="activity-bullet-icon">✓</span> <span>Connected relevant observations with our research on organic farming awareness and adoption.</span></li>
+                </ul>
+              </div>
+
+              <div class="activity-callout" style="border-left-color: var(--brown);">
+                <div class="activity-callout-title" style="color: var(--brown);" data-i18n="exp_learning_heading">🌱 Experience &amp; Learning</div>
+                <p>The activity helped us understand how newspapers communicate agricultural information to the public. It also provided additional context for our own article by bringing attention to the issues and experiences discussed in agricultural reporting.</p>
+              </div>
+
+              <!-- Newspaper Cutouts Strip (Document badge, contain uncropped) -->
+              <div class="activity-thumb-row" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-18')" tabindex="0" role="button" aria-label="Newspaper clipping 1">
+                  <span class="activity-thumb-badge badge-document" data-i18n="badge_document">Document</span>
+                  <picture>
+                    <source srcset="assets/images/activities/newspaper-analysis/thumb/08-newspaper-1.webp" type="image/webp">
+                    <img src="assets/images/activities/newspaper-analysis/thumb/08-newspaper-1.jpg" alt="News clipping: Organic farming has become the need of the hour" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-20')" tabindex="0" role="button" aria-label="Newspaper clipping 3">
+                  <span class="activity-thumb-badge badge-document" data-i18n="badge_document">Document</span>
+                  <picture>
+                    <source srcset="assets/images/activities/newspaper-analysis/thumb/08-newspaper-3.webp" type="image/webp">
+                    <img src="assets/images/activities/newspaper-analysis/thumb/08-newspaper-3.jpg" alt="News clipping: National vision for natural farming and soil restoration" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <div class="activity-thumb-item contain" onclick="openActivityLightboxByImageId('img-22')" tabindex="0" role="button" aria-label="Newspaper clipping 5">
+                  <span class="activity-thumb-badge badge-document" data-i18n="badge_document">Document</span>
+                  <picture>
+                    <source srcset="assets/images/activities/newspaper-analysis/thumb/08-newspaper-5.webp" type="image/webp">
+                    <img src="assets/images/activities/newspaper-analysis/thumb/08-newspaper-5.jpg" alt="News clipping: Organic pomegranate cultivation generating sustainable returns" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="activity-links-row">
+                <a href="#gallery?filter=newspaper-analysis" class="activity-view-gallery-link">View all 5 clippings in gallery ➔</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. IMAGE GALLERY SECTION (#gallery)
+         Data-driven responsive masonry grid with filter chips & type badges
+         =================================================================== -->
+    <section class="gallery-section section-mehendi-light" id="gallery">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <span class="section-eyebrow eyebrow-green" data-i18n="gallery_eyebrow">Visual Documentation</span>
+          <h2 data-i18n="gallery_title">Project Image Gallery</h2>
+          <p data-i18n="gallery_sub">Authentic photographs, survey data charts, digital interface screenshots, and news cutouts from our project work.</p>
+        </div>
+
+        <!-- Filter Chips Bar -->
+        <div class="gallery-filters" role="group" aria-label="Filter gallery images">
+          <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">
+            <span data-i18n="filter_all">All</span>
+            <span class="filter-count">22</span>
+          </button>
+          <button type="button" class="filter-chip" data-filter="research-awareness" aria-pressed="false">
+            <span data-i18n="filter_research">Research</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button type="button" class="filter-chip chip-saffron" data-filter="field-visit-hanumanwadi" aria-pressed="false">
+            <span data-i18n="filter_field_visit">Field Visit</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button type="button" class="filter-chip chip-saffron" data-filter="farmer-interview-vidhate" aria-pressed="false">
+            <span data-i18n="filter_interview">Farm Interview</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button type="button" class="filter-chip chip-terracotta" data-filter="farmer-survey-lalgun" aria-pressed="false">
+            <span data-i18n="filter_survey">Survey</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button type="button" class="filter-chip chip-blue" data-filter="digital-initiative-jaiviksetu" aria-pressed="false">
+            <span data-i18n="filter_digital">JaivikSetu</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button type="button" class="filter-chip chip-brown" data-filter="article-writing" aria-pressed="false">
+            <span data-i18n="filter_article">Article</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button type="button" class="filter-chip chip-brown" data-filter="awareness-poster" aria-pressed="false">
+            <span data-i18n="filter_poster">Poster</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button type="button" class="filter-chip chip-brown" data-filter="newspaper-analysis" aria-pressed="false">
+            <span data-i18n="filter_newspaper">Newspaper</span>
+            <span class="filter-count">5</span>
+          </button>
+        </div>
+
+        <!-- Masonry Grid (Rendered dynamically) -->
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite">
+          <!-- Dynamically populated by js/activities.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5. OVERALL PROJECT LEARNING (#learning)
+         =================================================================== -->
+    <section class="section-padding section-mehendi" id="learning">
+      <div class="container">
+        <div class="learning-card">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="section-eyebrow eyebrow-green" data-i18n="learning_eyebrow">Reflections &amp; Insights</span>
+            <h2 data-i18n="learning_title" style="margin-bottom: 0.5rem;">Overall Project Learning</h2>
+          </div>
+
+          <div style="font-size: 1.05rem; color: var(--ink); line-height: 1.8;">
+            <p>Our activities gave us an opportunity to study organic farming from different perspectives: research, direct interaction, practical observation, survey-based analysis and information sharing.</p>
+            <p>The field visit helped us understand the farming practices used in local conditions. The interview at Vidhate Natural Farm highlighted natural resource reuse and biodiversity, while the survey helped us organise questions about awareness, current practices, knowledge and adoption barriers. Our awareness material, article and JaivikSetu website provided ways to communicate information beyond the research itself.</p>
+            <p>Together, these activities reinforced the importance of connecting <strong>awareness with practical knowledge</strong>. Organic farming practices need to be explained clearly, with appropriate preparation guidance and consideration of the conditions in which farmers work.</p>
+            <p style="margin-bottom: 0;">Through this project, we aimed to understand farmers' experiences, share useful information and make organic farming knowledge more accessible.</p>
+          </div>
+
+          <!-- Highlighted Central Takeaway Quote -->
+          <div class="learning-central-takeaway">
+            <div class="takeaway-icon" aria-hidden="true">🌱</div>
+            <div class="takeaway-content-wrap">
+              <span class="takeaway-label" data-i18n="takeaway_label">Our central takeaway:</span>
+              <blockquote class="takeaway-quote" data-i18n="takeaway_quote">
+                "Increasing awareness is an important beginning; making organic farming practices easier to understand and adopt is the next step."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. END CTA STRIP -->
+        <div class="activities-cta-strip">
+          <h3 data-i18n="cta_about_title">Know more about the project and mission</h3>
+          <p data-i18n="cta_about_sub">Explore our non-commercial ethos, references, and open-access educational tools for Indian agriculture.</p>
+          <a href="about.html" class="btn" data-i18n="cta_about_btn" style="background: var(--saffron); color: #ffffff; padding: 0.85rem 2.2rem; border-radius: var(--radius-pill); font-weight: 700; font-size: 1rem; box-shadow: 0 4px 14px rgba(217, 144, 26, 0.4); display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+            About JaivikSetu ➔
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       FULLSCREEN ACCESSIBLE LIGHTBOX VIEWER
+       Supports Esc, Left/Right arrows, Touch swipe, Focus trapping
+       =================================================================== -->
+  <div class="lightbox-backdrop" id="lightbox-viewer" role="dialog" aria-modal="true" aria-label="Image lightbox viewer">
+    <div class="lightbox-dialog" tabindex="-1">
+      <div class="lightbox-header">
+        <span class="lightbox-counter" id="lb-counter">1 / 22</span>
+        <button type="button" class="lightbox-close-btn" id="lb-close-btn" aria-label="Close viewer (Escape)">✕</button>
+      </div>
+
+      <div class="lightbox-body">
+        <button type="button" class="lightbox-nav-btn lightbox-nav-prev" id="lb-prev-btn" aria-label="Previous image">‹</button>
+
+        <div class="lightbox-media-wrap">
+          <img id="lb-image" src="" alt="" loading="eager" decoding="async">
+        </div>
+
+        <button type="button" class="lightbox-nav-btn lightbox-nav-next" id="lb-next-btn" aria-label="Next image">›</button>
+      </div>
+
+      <div class="lightbox-footer">
+        <div class="lightbox-info">
+          <div class="lightbox-tags-row">
+            <span class="lightbox-activity-tag" id="lb-tag">Field Visit</span>
+            <span id="lb-badge" class="image-type-badge badge-illustration" style="display: none;">Illustration</span>
+          </div>
+          <p class="lightbox-caption" id="lb-caption"></p>
+        </div>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="lightbox-open-orig" id="lb-open-orig" data-i18n="lb_open_orig">Open original ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       FOOTER
+       Deep green #1B4A2A with hill silhouette on top
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-hill-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M0,32 C360,0 720,48 1080,16 C1260,0 1380,24 1440,32 L1440,48 L0,48 Z"></path></svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;color:white;">
+                <path d="M12 22v-9" stroke-width="2.5"></path>
+                <path d="M12 13c0-4.5 3.5-7 8-7-0.5 4.5-3.5 7-8 7z" fill="rgba(255,255,255,0.2)"></path>
+                <path d="M12 15c0-4-3-6-7-6 0.5 4 3 6 7 6z" fill="rgba(255,255,255,0.2)"></path>
+              </svg>
+            </div>
+            <div class="brand-name"><span style="color: #ffffff;">Jaivik</span><span style="color: #FFE58F;">Setu</span></div>
+          </div>
+          <p data-i18n="footer_tagline">Bridging Indian farmers, students, and home gardeners to sustainable organic agriculture.</p>
+          <div style="margin-top: 1.25rem;">
+            <button type="button" class="lang-toggle-btn" aria-label="Toggle language">
+              <span>🌐</span> <span data-i18n="lang_btn">मराठी</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="learn.html" data-i18n="nav_learn">Learn</a></li>
+            <li><a href="composting.html" data-i18n="nav_compost">Composting</a></li>
+            <li><a href="pesticides.html" data-i18n="nav_pesticides">Pesticides</a></li>
+            <li><a href="field-practices.html" data-i18n="nav_field">Field Practices</a></li>
+            <li><a href="schemes.html" data-i18n="nav_schemes">Schemes</a></li>
+            <li><a href="activities.html" data-i18n="nav_activities">Activities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_guides_title">Practical Guides</h4>
+          <ul class="footer-links">
+            <li><a href="tools.html#calculator" data-i18n="tool_calc_title">Compost Calculator</a></li>
+            <li><a href="tools.html#pest-finder" data-i18n="tool_pest_title">Natural Pest Finder</a></li>
+            <li><a href="tools.html#quiz" data-i18n="tool_quiz_title">Which Method Suits Me?</a></li>
+            <li><a href="campaign.html#gallery">Campaign Gallery</a></li>
+            <li><a href="activities.html#gallery">Activities Gallery</a></li>
+            <li><a href="about.html">About &amp; Mission</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_downloads_title">Printable Guides</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('compost')" data-i18n="pdf_compost">📄 Compost Cheat-Sheet</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('pesticide')" data-i18n="pdf_pesticide">📄 Pesticide Recipes Card</a></li>
+            <li><a href="javascript:void(0)" onclick="openDownloadModal('schemes')" data-i18n="pdf_schemes">📄 Scheme Summary</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box">
+        <strong style="color: #FFE9A8; display: block; margin-bottom: 0.25rem;" data-i18n="footer_disclaimer_title">Educational Disclaimer:</strong>
+        <span data-i18n="footer_disclaimer">JaivikSetu is a dedicated educational and awareness portal. Farmers are advised to consult local Krishi Vigyan Kendras (KVK) or State Agriculture Officers for location-specific dosage and scheme filings.</span>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 JaivikSetu. All rights reserved. Open-access awareness initiative for Indian Agriculture.</span>
+        <span data-i18n="footer_made_with">Made with 💚 for Indian Farmers</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Printable Guide Modal -->
+  <div class="modal-backdrop" id="download-modal" onclick="if(event.target===this) closeDownloadModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeDownloadModal()" aria-label="Close modal">✕</button>
+      <h3 id="modal-guide-title">JaivikSetu Practical Guide</h3>
+      <div id="modal-guide-content"></div>
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button type="button" class="btn btn-outline-dark" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button type="button" class="btn btn-primary" onclick="closeDownloadModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/activities.js"></script>
+</body>
+</html>

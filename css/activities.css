@@ -1,0 +1,1099 @@
+/* ===================================================================
+   JAIVIKSETU ACTIVITIES & GALLERY STYLESHEET
+   Extends JaivikSetu design system:
+   - Mehendi theme & cream cards
+   - Vertical timeline with scroll progress
+   - Masonry image gallery with animated filters
+   - Fullscreen accessible lightbox with touch & keyboard support
+   - Home page teaser strip
+   =================================================================== */
+
+/* -------------------------------------------------------------------
+   1. Sub-navigation Pills Bar
+   ------------------------------------------------------------------- */
+.subnav-pills-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1.5rem auto 0;
+  max-width: 600px;
+}
+
+.subnav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(107, 74, 42, 0.2);
+  color: var(--green-900);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.subnav-pill:hover,
+.subnav-pill:focus-visible {
+  background: var(--cream-pure);
+  color: var(--saffron);
+  border-color: var(--saffron);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* -------------------------------------------------------------------
+   2. Timeline Section (#journey)
+   ------------------------------------------------------------------- */
+.timeline-container {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* Central vertical guide line */
+.timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(107, 74, 42, 0.18);
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.timeline-progress-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 0%;
+  background: linear-gradient(180deg, var(--green-600) 0%, var(--saffron) 100%);
+  transform: translateX(-50%);
+  border-radius: 4px;
+  transition: height 0.15s ease-out;
+  box-shadow: 0 0 10px rgba(217, 144, 26, 0.5);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  width: 50%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 1rem;
+}
+
+/* Alternating Left / Right on Desktop */
+.timeline-item-left {
+  left: 0;
+  padding-right: 3.5rem;
+  justify-content: flex-end;
+}
+
+.timeline-item-right {
+  left: 50%;
+  padding-left: 3.5rem;
+  justify-content: flex-start;
+}
+
+/* Numbered Saffron Circle Marker */
+.timeline-marker {
+  position: absolute;
+  top: 1.5rem;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(217, 144, 26, 0.45);
+  border: 4px solid var(--cream-card);
+  z-index: 10;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timeline-item-left .timeline-marker {
+  right: -24px;
+}
+
+.timeline-item-right .timeline-marker {
+  left: -24px;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(217, 144, 26, 0.6);
+}
+
+/* Activity Card */
+.activity-card {
+  background: var(--cream-card);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(107, 74, 42, 0.12);
+  width: 100%;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Activity Accent Border Top */
+.activity-card.accent-green {
+  border-top: 5px solid var(--green-600);
+}
+.activity-card.accent-saffron {
+  border-top: 5px solid var(--saffron);
+}
+.activity-card.accent-terracotta {
+  border-top: 5px solid var(--terracotta);
+}
+.activity-card.accent-blue {
+  border-top: 5px solid var(--blue);
+}
+.activity-card.accent-brown {
+  border-top: 5px solid var(--brown);
+}
+
+/* Header inside card */
+.activity-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.activity-icon-badge {
+  font-size: 1.85rem;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: var(--radius-md);
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(107, 74, 42, 0.15);
+  box-shadow: var(--shadow-sm);
+}
+
+.activity-meta {
+  flex: 1;
+}
+
+.activity-step-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.activity-step-label.accent-green { color: var(--green-600); }
+.activity-step-label.accent-saffron { color: var(--saffron); }
+.activity-step-label.accent-terracotta { color: var(--terracotta); }
+.activity-step-label.accent-blue { color: var(--blue); }
+.activity-step-label.accent-brown { color: var(--brown); }
+
+.activity-title {
+  font-size: 1.35rem;
+  color: var(--green-900);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.activity-subtitle {
+  font-size: 0.95rem;
+  color: var(--ink-subtle);
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.activity-intro {
+  margin-bottom: 1.25rem;
+}
+
+.activity-intro p {
+  font-size: 0.98rem;
+  color: var(--ink-muted);
+  line-height: 1.68;
+  margin-bottom: 0.85rem;
+}
+
+/* Bullet Groups */
+.activity-bullet-group {
+  margin-bottom: 1.25rem;
+  background: rgba(251, 243, 220, 0.45);
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(107, 74, 42, 0.08);
+}
+
+.activity-bullet-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.activity-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-bullet-item {
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.activity-bullet-item:last-child {
+  margin-bottom: 0;
+}
+
+.activity-bullet-icon {
+  color: var(--green-600);
+  font-weight: 800;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+/* Experience & Learning Callout */
+.activity-callout {
+  background: var(--cream);
+  border-left: 4px solid var(--green-600);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.15rem 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.activity-callout-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--green-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.activity-callout p {
+  font-size: 0.93rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  margin-bottom: 0.6rem;
+}
+
+.activity-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Key Learning Highlight Quote Card */
+.activity-key-learning {
+  background: linear-gradient(135deg, #FEF5E7 0%, #FFFDF8 100%);
+  border: 1.5px solid rgba(217, 144, 26, 0.35);
+  border-left: 5px solid var(--saffron);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.key-learning-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--saffron-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.key-learning-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-900);
+  line-height: 1.55;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Thumbnail Row in Activity Card */
+.activity-thumb-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.85rem;
+}
+
+.activity-thumb-item {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--cream);
+  cursor: pointer;
+  border: 1px solid rgba(107, 74, 42, 0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.activity-thumb-item:hover,
+.activity-thumb-item:focus-visible {
+  transform: scale(1.04);
+  box-shadow: var(--shadow-md);
+  outline: 2px solid var(--saffron);
+}
+
+.activity-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.activity-thumb-item.contain img {
+  object-fit: contain;
+  background: var(--cream-pure);
+  padding: 4px;
+}
+
+.activity-thumb-item:hover img {
+  transform: scale(1.08);
+}
+
+.activity-thumb-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: rgba(43, 36, 20, 0.82);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.activity-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(107, 74, 42, 0.15);
+}
+
+.activity-view-gallery-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--saffron);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.activity-view-gallery-link:hover,
+.activity-view-gallery-link:focus-visible {
+  color: var(--saffron-dark);
+  transform: translateX(3px);
+}
+
+.activity-action-btns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* -------------------------------------------------------------------
+   3. Image Gallery Section (#gallery)
+   ------------------------------------------------------------------- */
+.gallery-section {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+/* Filter Chips Bar */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2.75rem;
+}
+
+.filter-chip {
+  background: var(--cream-pure);
+  border: 1.5px solid rgba(107, 74, 42, 0.2);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.filter-chip:hover,
+.filter-chip:focus-visible {
+  background: var(--cream);
+  color: var(--green-900);
+  border-color: var(--green-600);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.filter-chip.active {
+  background: var(--green-900);
+  color: #ffffff;
+  border-color: var(--green-900);
+  box-shadow: 0 4px 12px rgba(27, 74, 42, 0.3);
+}
+
+.filter-chip.active.chip-saffron {
+  background: var(--saffron);
+  border-color: var(--saffron);
+}
+.filter-chip.active.chip-terracotta {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.filter-chip.active.chip-blue {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.filter-chip.active.chip-brown {
+  background: var(--brown);
+  border-color: var(--brown);
+}
+
+.filter-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.75;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+}
+
+.filter-chip.active .filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  opacity: 1;
+}
+
+/* Masonry Grid (4 col desktop, 3 tablet, 2 mobile) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.gallery-tile {
+  background: var(--cream-pure);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(107, 74, 42, 0.12);
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), opacity 0.3s ease, filter 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-tile:hover,
+.gallery-tile:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  outline: 3px solid var(--saffron);
+}
+
+.gallery-tile-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.gallery-tile-img-wrap.aspect-tall {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-tile-img-wrap.aspect-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-tile-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+/* Contain uncropped for charts, cutouts, screenshots */
+.gallery-tile.type-chart .gallery-tile-img-wrap img,
+.gallery-tile.type-screenshot .gallery-tile-img-wrap img,
+.gallery-tile.type-document .gallery-tile-img-wrap img {
+  object-fit: contain;
+  background: var(--cream-pure);
+  padding: 8px;
+}
+
+.gallery-tile:hover .gallery-tile-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Image Type Badge */
+.image-type-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.badge-illustration {
+  background: #2E7D32;
+  color: #ffffff;
+}
+
+.badge-chart {
+  background: var(--terracotta);
+  color: #ffffff;
+}
+
+.badge-screenshot {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.badge-document {
+  background: var(--brown);
+  color: #ffffff;
+}
+
+/* Tile Caption Overlay */
+.gallery-tile-caption-bar {
+  padding: 0.85rem 1rem;
+  background: var(--cream-card);
+  border-top: 1px solid rgba(107, 74, 42, 0.08);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-tile-text {
+  font-size: 0.88rem;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.gallery-tile-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ink-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Hidden tiles during filter */
+.gallery-tile.is-filtered-out {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------------
+   4. Lightbox Viewer (Full-Screen Accessible Modal)
+   ------------------------------------------------------------------- */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 25, 18, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.lightbox-backdrop.is-active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-dialog {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.lightbox-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lightbox-counter {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFE58F;
+  letter-spacing: 0.05em;
+}
+
+.lightbox-close-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-close-btn:hover,
+.lightbox-close-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.08);
+  outline: 2px solid var(--saffron);
+}
+
+.lightbox-body {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-media-wrap {
+  max-height: 70vh;
+  max-width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-media-wrap img {
+  max-height: 70vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease;
+}
+
+/* Lightbox Prev / Next Nav Buttons */
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all var(--transition-fast);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-nav-btn:hover,
+.lightbox-nav-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.35);
+  color: #FFE58F;
+  border-color: #FFE58F;
+  transform: translateY(-50%) scale(1.1);
+  outline: 2px solid var(--saffron);
+}
+
+.lightbox-nav-prev {
+  left: 10px;
+}
+
+.lightbox-nav-next {
+  right: 10px;
+}
+
+/* Lightbox Footer Bar (Caption, Badge, Open Original) */
+.lightbox-footer {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(27, 35, 28, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.lightbox-info {
+  flex: 1;
+}
+
+.lightbox-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.lightbox-activity-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFE58F;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lightbox-caption {
+  font-size: 0.96rem;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.lightbox-open-orig {
+  color: #FFE58F;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 229, 143, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-open-orig:hover,
+.lightbox-open-orig:focus-visible {
+  background: #FFE58F;
+  color: var(--green-900);
+  border-color: #FFE58F;
+  outline: 2px solid #ffffff;
+}
+
+/* -------------------------------------------------------------------
+   5. Overall Project Learning Section (#learning)
+   ------------------------------------------------------------------- */
+.learning-card {
+  background: var(--cream-card);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1.5px solid rgba(107, 74, 42, 0.15);
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.learning-central-takeaway {
+  background: linear-gradient(135deg, #FEF5E7 0%, #FFFDF8 100%);
+  border: 2px solid var(--saffron);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: 0 8px 24px rgba(217, 144, 26, 0.15);
+}
+
+.takeaway-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.takeaway-content-wrap {
+  flex: 1;
+}
+
+.takeaway-label {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--saffron-dark);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.takeaway-quote {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-900);
+  line-height: 1.45;
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+/* -------------------------------------------------------------------
+   6. End CTA Strip
+   ------------------------------------------------------------------- */
+.activities-cta-strip {
+  background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%);
+  color: #ffffff;
+  padding: 3.5rem 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 980px;
+  margin: 3rem auto 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.activities-cta-strip h3 {
+  color: #ffffff;
+  font-size: 1.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.activities-cta-strip p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto 1.75rem;
+}
+
+/* -------------------------------------------------------------------
+   7. Home Page Teaser Strip
+   ------------------------------------------------------------------- */
+.activities-preview-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.preview-photo-card {
+  background: var(--cream-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(107, 74, 42, 0.12);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-photo-card:hover,
+.preview-photo-card:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  outline: 2px solid var(--saffron);
+}
+
+.preview-photo-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.preview-photo-card:hover .preview-photo-img {
+  transform: scale(1.05);
+}
+
+.preview-photo-caption {
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.4;
+  flex: 1;
+  background: var(--cream-pure);
+}
+
+/* -------------------------------------------------------------------
+   8. Responsive Breakpoints
+   ------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .learning-card {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Stack Timeline items on mobile / small screens */
+  .timeline-track,
+  .timeline-progress-line {
+    left: 24px;
+    transform: none;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 4.5rem !important;
+    padding-right: 0 !important;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-marker {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  .activities-preview-strip {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .learning-card {
+    padding: 1.85rem 1.25rem;
+  }
+  .takeaway-quote {
+    font-size: 1.15rem;
+  }
+  .lightbox-nav-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+  .lightbox-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .activity-card {
+    padding: 1.5rem 1.15rem;
+  }
+  .activity-title {
+    font-size: 1.2rem;
+  }
+  .activity-icon-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+}
+
+/* -------------------------------------------------------------------
+   9. Accessibility: Reduced Motion
+   ------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-progress-line,
+  .activity-card,
+  .gallery-tile,
+  .preview-photo-card,
+  .filter-chip,
+  .lightbox-backdrop,
+  .timeline-marker {
+    transition: none !important;
+    transform: none !important;
+  }
+  .activity-thumb-item:hover img,
+  .preview-photo-card:hover .preview-photo-img,
+  .gallery-tile:hover .gallery-tile-img-wrap img {
+    transform: none !important;
+  }
+}
